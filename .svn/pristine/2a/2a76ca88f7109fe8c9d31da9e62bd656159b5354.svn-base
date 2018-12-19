@@ -1,0 +1,71 @@
+<?php
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+// Escape user inputs for security
+if (isset($_POST['aadhar'])){
+			$aadhar = $_POST['aadhar'];
+	}
+	else $aadhar=0;
+
+if (isset($_POST['pan'])){
+			$pan = $_POST['pan'];
+	}
+	else $pan=0;
+//w_id=work id
+if (isset($_POST['c1_id'])){
+			$c1_id = $_POST['c1_id'];
+	}
+	else $c1_id=0;
+if (isset($_POST['c2_id'])){
+			$c2_id = $_POST['c2_id'];
+	}
+	else $c2_id=0;
+	if (isset($_POST['additional_requirement'])){
+			$additional = $_POST['additional_requirement'];
+	}
+	else $additional="";
+	
+
+	//Creating an string
+$requirement=$aadhar.'-'.$pan.'-'.$c1_id.'-'.$c2_id.'-'.$additional;
+
+
+	if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		}
+	if(isset($_POST['bid_pass']))
+		{
+			$bid=$_POST['bid_pass'];
+		}
+
+
+// attempt insert query execution
+
+$sql="UPDATE business_details SET 
+	requirement='$requirement'
+	WHERE bid=$bid";
+	if(mysqli_query($pcon, $sql))
+		{
+				
+			header("Location:rules.php?id=1&eid=$eid&sid=$sid&pid=$pid&bid=$bid");
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+
+// close connection
+
+mysqli_close($pcon);
+?>

@@ -1,0 +1,124 @@
+<?php
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+// Escape user inputs for security
+if (isset($_POST['rented_before'])){
+			$rented_before = $_POST['rented_before'];
+	}
+	else $rented_before=0;
+
+if (isset($_POST['often'])){
+			$often = $_POST['often'];
+	}
+	else $often=0;
+
+if (isset($_POST['notice'])){
+			$notice = $_POST['notice'];
+	}
+	else $often=0;
+//w_id=work id
+if (isset($_POST['advance'])){
+			$advance = $_POST['advance'];
+	}
+	else $advance=0;
+if (isset($_POST['contact'])){
+			$contact = $_POST['contact'];
+	}
+	else $contact=0;
+
+	if (isset($_POST['someday'])){
+			$someday = $_POST['someday'];
+	}
+	else $someday="0";
+
+	if (isset($_POST['license'])){
+			$license = $_POST['license'];
+	}
+	else $license="0";
+
+	if (isset($_POST['customer_duration'])){
+			$customer_duration = $_POST['customer_duration'];
+	}
+	else $customer_duration="0";
+
+	
+$question1="rented_before";
+$question2="customer_frequency";
+$question3="notice_before_customer_arrives";
+$question4="customer_advance_booking";
+$question5="when_should_customer_contact";
+$question6="how_long_customer_stay";
+$question7="customer_for_some_day";
+$question8="license_number";
+
+$qa1=$question1.'+'.$rented_before;
+$qa2=$question2.'+'.$often;
+$qa3=$question3.'+'.$notice;
+$qa4=$question4.'+'.$advance;
+$qa5=$question5.'+'.$contact;
+$qa6=$question6.'+'.$customer_duration;
+$qa7=$question7.'+'.$someday;
+$qa8=$question8.'+'.$license;
+
+
+	if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		}
+	if(isset($_POST['bid_pass']))
+		{
+			$bid=$_POST['bid_pass'];
+		}
+
+
+$row=mysqli_fetch_array(mysqli_query($pcon, "SELECT service from service_detail where s_id=$sid"));
+$service=$row['service'];
+
+// attempt insert query execution
+
+$sql="UPDATE business_details SET 
+	qa1='$qa1',
+	qa2='$qa2',
+	qa3='$qa3',
+	qa4='$qa4',
+	qa5='$qa5',
+	qa6='$qa6',
+	qa7='$qa7',
+	qa8='$qa8'
+	WHERE bid=$bid";
+	if(mysqli_query($pcon, $sql))
+		{
+			if($service=='Food')
+			{header("Location:price_setting_food.php?id=1&eid=$eid&sid=$sid&pid=$pid&bid=$bid");
+			}
+			else if($service=='Accommodation')
+			{
+				header("Location:price_setting_accommodation.php?id=1&eid=$eid&sid=$sid&pid=$pid&bid=$bid");
+			}
+			else
+			{
+			echo '
+			<div class="container"><div class="alert alert-success" role="alert" > 
+			<center>Please Select the Service from Service type in Listing Details</center></div></div>';
+							
+			}
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+
+// close connection
+
+mysqli_close($pcon);
+?>

@@ -1,0 +1,68 @@
+<?php
+//Global constants
+$SERVER_DB_INITIAL='';
+$INFO_GATH_DB=$SERVER_DB_INITIAL.'placeefy_info_gath';
+$BED_COUNT=10;
+
+
+//Helper functions
+
+//Connection with DB
+function connectToDB($dbname){
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	return $conn;
+}
+
+//Helper method to check session started
+function is_session_started()
+{
+    if ( php_sapi_name() !== 'cli' ) {
+        if ( version_compare(phpversion(), '5.4.0', '>=') ) {
+            return session_status() === PHP_SESSION_ACTIVE ? TRUE : FALSE;
+        } else {
+            return session_id() === '' ? FALSE : TRUE;
+        }
+    }
+    return FALSE;
+}
+
+
+//Helper method which populates service Vs Type and Type vs Sub Type
+function fetchServices(&$serviceVsType,&$typeVsSubType){
+	$conn=connectToDB('placeefy_info_gath');
+	//Populate Data from Masters
+	$sql = "SELECT id, service, type FROM servicevstype";
+	$result = mysqli_query($conn, $sql);
+
+	if (mysqli_num_rows($result) > 0) {
+	    while($row = mysqli_fetch_assoc($result)) {
+	        $typesArray=array();
+	        if(strpos($row['type'],':')!=false){
+	        	$array=explode(';',$row['type']);
+	        	foreach ($array as $key => $value) {
+	        		$type=explode(':',$value);
+	        		array_push($typesArray, $type[0]);
+	        		$typeVsSubType[$type[0]] = explode(',',$type[1]);
+	        	}
+	        	$serviceVsType[$row['service']]=$typesArray;
+	        }
+	        else{
+	        	$serviceVsType[$row['service']]=explode(';',$row['type']);
+	        }
+	    }
+	}
+	mysqli_close($conn);
+}
+
+
+
+
+?>

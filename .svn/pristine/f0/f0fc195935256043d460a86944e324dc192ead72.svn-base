@@ -1,0 +1,51 @@
+<?php
+
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+ 
+// Escape user inputs for security
+$p_fname = mysqli_real_escape_string($pcon, $_POST['name_of_owner_first']);
+//$p_mname = mysqli_real_escape_string($pcon, $_POST['name_of_owner_middle']);
+$p_lname = mysqli_real_escape_string($pcon, $_POST['name_of_owner_last']);
+$p_contact_1 = mysqli_real_escape_string($pcon, $_POST['CONTACT1']);
+$p_contact_2 = mysqli_real_escape_string($pcon, $_POST['CONTACT2']);
+$p_email = mysqli_real_escape_string($pcon, $_POST['Email']);
+$p_website = mysqli_real_escape_string($pcon, $_POST['website']);
+$p_plot_no = mysqli_real_escape_string($pcon, $_POST['plot']);
+$p_area = mysqli_real_escape_string($pcon, $_POST['area']);
+$p_road = mysqli_real_escape_string($pcon, $_POST['road']);
+$p_landmark = mysqli_real_escape_string($pcon, $_POST['landmark']);
+$p_city = mysqli_real_escape_string($pcon, $_POST['city']);
+$p_pincode = mysqli_real_escape_string($pcon, $_POST['pincode']);
+ $p_lat = mysqli_real_escape_string($pcon, $_POST['p_lat']);
+ $p_long = mysqli_real_escape_string($pcon, $_POST['p_long']);
+$eid_pass = mysqli_real_escape_string($pcon, $_POST['eid_pass']);
+
+// $query = mysqli_query($pcon,"select * from provider_detail_personal where p_email='$p_email'");
+// 	if(mysqli_num_rows($query)>0)
+// 	{
+// 		header("Location:personal_details.php?returnid=1");
+// 	}
+// 	else{
+
+// attempt insert query execution
+//$sql = "INSERT INTO provider_detail_personal (eid,p_fname, p_mname, p_lname, p_contact_1, p_contact_2, p_email, p_website, p_plot_no, p_area, p_road, p_landmark, p_city, p_pincode, p_lat,p_long) VALUES ($eid_pass, '$p_fname', '$p_mname', '$p_lname', '$p_contact_1', '$p_contact_2', '$p_email', '$p_website', '$p_plot_no', '$p_area', '$p_road', '$p_landmark', '$p_city', '$p_pincode','$p_lat','$p_long')";
+$sql = "INSERT INTO provider_detail_personal (eid, p_fname, p_lname, p_contact_1, p_contact_2, p_email, p_website, p_plot_no, p_area, p_road, p_landmark, p_city, p_pincode, p_lat,p_long) VALUES ($eid_pass, '$p_fname', '$p_lname', '$p_contact_1', '$p_contact_2', '$p_email', '$p_website', '$p_plot_no', '$p_area', '$p_road', '$p_landmark', '$p_city', '$p_pincode','$p_lat','$p_long')";
+
+
+		
+if(mysqli_query($pcon, $sql))
+{
+	$pid=mysqli_insert_id($pcon);	
+	header("Location:create_new.php?id=1&eid=$eid_pass&pid=$pid");
+} 
+else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+	}
+	
+// close connection
+
+mysqli_close($pcon);
+?>

@@ -1,0 +1,234 @@
+<?php
+	include'session_verification.php';
+	?>
+
+
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Placeefy| Food and Accommodations Services</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<style type="text/css">
+					@media only screen and (max-width: 600px) {
+					    #signature {
+					        height:auto;
+					    }
+					}
+
+					</style>
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="../css/linearicons.css">
+			<link rel="stylesheet" href="../css/font-awesome.min.css">
+			<link rel="stylesheet" href="../css/bootstrap.css">
+			<link rel="stylesheet" href="../css/magnific-popup.css">
+			<link rel="stylesheet" href="../css/nice-select.css">							
+			<link rel="stylesheet" href="../css/animate.min.css">
+			<link rel="stylesheet" href="../css/jquery-ui.css">			
+			<link rel="stylesheet" href="../css/main.css">
+
+			<!--
+			 JS
+			=================================================== -->
+			<script src="../js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="../js/vendor/bootstrap.min.js"></script>			
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="../js/easing.min.js"></script>			
+			<script src="../js/hoverIntent.js"></script>
+			<script src="../js/superfish.min.js"></script>	
+			<script src="../js/jquery.ajaxchimp.min.js"></script>
+			<script src="../js/jquery.magnific-popup.min.js"></script>	
+ 			<script src="../js/jquery-ui.js"></script>								
+			<script src="../js/jquery.nice-select.min.js"></script>							
+			<script src="../js/mail-script.js"></script>	
+			<script src="../js/main.js"></script>	
+		</head>
+		
+				 <?php  if(isset($_GET['eid']))
+						{
+							$eid=$_GET['eid'];
+						}
+						if(isset($_GET['pid']))
+						{
+							$pid=$_GET['pid'];
+						}
+						if(isset($_GET['sid']))
+						{
+							$sid=$_GET['sid'];
+						}
+						if(isset($_GET['bid']))
+						{
+							$bid=$_GET['bid'];
+						}
+						?>
+		<body>	
+			  <header id="header">
+		  	
+			    <div class="fluid-container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+			    		<a href="#"><img src="../img/logo.png" alt="" title="" /></a>		
+						<nav id="nav-menu-container">
+							<ul class="nav-menu">
+							  <li class="menu-active"><a href="employee_refer_page.html">Referral</a></li>
+							  <li><a href="logout_employee.php">Logout</a></li>
+							  <li><a href="#">About Us</a></li>
+							  <li><a href="#">Help</a></li>
+							</ul>
+						</nav><!-- #nav-menu-container -->		
+			    	</div>
+			    </div>
+
+			    <script src="jsign/jSignature.min.js"></script>
+				<script>
+				    $(document).ready(function() {
+				      //documentation https://github.com/brinley/jSignature
+				        $("#signature").jSignature()
+				        
+				    })
+				</script>
+
+
+			  </header><!-- #header -->
+
+				<section class="services-area pb-120" style="margin-top: 90px">
+				<div class="container">
+
+
+					<?php
+						if(isset($_GET['id']))
+						{
+					  		$id=$_GET['id'];
+							if($id==1)
+							{
+								echo '<div class="alert alert-success" role="alert" > 
+									<center>Information Saved Successfully.</center></div>';
+							}
+						}
+					?>
+					<div class="row section-title" style="margin-bottom: 40px;">
+						<h1>Accept Our Proposal</h1>
+						<p>
+						
+						</p>
+					</div>
+
+					<form class="form-horizontal" enctype="multipart/form-data" method="post" action="acceptance_process.php">
+					  
+						<div class="form-control">
+
+				<!-- 	<div class="container">
+					<h2>Signature</h2>
+					
+
+
+					<div  style="border:2px solid green;">  
+					    <div id="signature"></div>
+					</div>
+
+
+					<div style="width:60px; float:left; border:1px solid black; padding:10px;" onclick="$('#signature').jSignature('reset'); document.getElementById('signdatapair0').value = ''; document.getElementById('signdatapair1').value = '';">Reset</div>
+
+
+					<div style="width:60px; float:left; border:1px solid black; padding:10px;" onclick="var datapair = $('#signature').jSignature('getData', 'svgbase64'); document.getElementById('signdatapair0').value = datapair[0]; document.getElementById('signdatapair1').value = datapair[1];">Done</div>
+
+					<div style="clear: both;"></div>
+
+					<input type="text" readonly placeholder="sign in svgbase64" id="signdatapair0" name="signdatapair0"  required />
+
+					<input type="text"  readonly placeholder="sign in svgbase64" id="signdatapair1" name="signdatapair1" required />
+					</div> -->
+					<br>
+
+					<input type="checkbox" value="1" name="agree_check" required/><strong>&nbspI hereby declare that the details furnished above are true and correct to the best of my knowledge and belief and I undertake to inform you of any changes therein, immediately. In case any of the above information is found to be false or untrue or misleading or misrepresenting, I am aware that I may be held liable for it. I hereby authorize sharing of the information furnished on this form with the Placeefy.</strong>
+    </div></div><!-- panel-group -->
+    						<input type="hidden" name="eid_pass" value="<?php echo $eid;?>">
+							<input type="hidden" name="pid_pass" value="<?php echo $pid;?>">
+							<input type="hidden" name="sid_pass" value="<?php echo $sid;?>">
+							<input type="hidden" name="bid_pass" value="<?php echo $bid;?>">
+<center><button type="submit" class="btn btn-primary">Submit Form</button></center>
+ 
+</form>
+</section>	
+<!-- start footer Area -->		
+			<footer class="footer-area section-gap" style="margin-top: 73px">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<p><b>Placeefy</b> is a web-based service startup where people can find the best and affordable rooms, mess, tiffin and hostel service in just a few clicks.</p>							
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Features</h6>
+								<ul>
+									<li><a href="#">Referral</a></li>
+									<li><a href="#">We're Hiring</a></li>
+									<li><a href="#">Official Placeefy Blog</a></li>
+									<li><a href="#">Terms of Service</a></li>
+								</ul>								
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>About</h6>
+								<ul>
+									<li><a href="#">Know more about us</a></li>
+									<li><a href="#">Our Team</a></li>
+									<li><a href="#">Our Services</a></li>
+									<li><a href="#">Where we are?</a></li>
+								</ul>								
+							</div>
+						</div>												
+						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+							<div class="single-footer-widget">
+								<h6>Follow Us</h6>
+								<p>Let us be social</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+							</div>
+						</div>							
+						<div class="col-lg-4  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Contact Us</h6>
+								<p>Having any queries? Please connect with us at:</p>
+								<p>+91-814907298</p>
+								<p>support@placeefy.com</p>
+								
+							</div>
+						</div>	
+						<hr>
+						<p class="mt-80 mx-auto footer-text col-lg-12">
+							
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with<i class="fa fa-heart-o" aria-hidden="true"></i> in Nagpur by <a href="https://placeefy.com" target="_blank">Placeefy Technologies</a>
+
+						</p>											
+					</div>
+				</div>
+				<img class="footer-bottom" src="../img/footer-bottom.png" alt="">
+			</footer>	
+			<!-- End footer Area -->	
+			
+			
+		</body>
+	</html>

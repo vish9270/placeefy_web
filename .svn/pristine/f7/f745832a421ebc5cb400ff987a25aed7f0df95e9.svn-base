@@ -1,0 +1,53 @@
+<?php
+
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+
+$eid = mysqli_real_escape_string($pcon, $_POST['eid_pass']);
+$pid= mysqli_real_escape_string($pcon, $_POST['pid_pass']);
+$sid= mysqli_real_escape_string($pcon, $_POST['sid_pass']);
+
+	$row = mysqli_fetch_array(mysqli_query($pcon,"SELECT num_bedroom, num_hall FROM service_detail where `s_id`=$sid"));
+	$num_bedroom=$row['num_bedroom'];	
+	$num_hall=$row['num_hall'];
+	$sleeping_arrangement='';
+	
+	for($i=1;$i<=$num_bedroom;$i++){
+		if(isset($_POST['room_bc'.$i])){
+			$room_bc=$_POST['room_bc'.$i];
+			if($room_bc=='#')
+				$room_bc=0;
+			$sleeping_arrangement .= 'r'.$i.'-'.$room_bc.';';
+		}							
+	}
+	
+	for($i=1;$i<=$num_hall;$i++){
+		if(isset($_POST['room_hc'.$i])){
+			$hall_bc=$_POST['room_hc'.$i];
+			if($hall_bc=='#')
+				$hall_bc=0;
+			$sleeping_arrangement .= 'h'.$i.'-'.$hall_bc.';';
+		}							
+	}
+	
+ $sql="UPDATE service_detail SET 
+ 	sleeping_arrangement='$sleeping_arrangement'
+ 	WHERE s_id=$sid";
+
+
+ 	if(mysqli_query($pcon, $sql)){
+ 		header("Location:bathroom_arrangement.php?id=1&eid=$eid&pid=$pid&sid=$sid");
+ 	} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+	}
+		
+
+// // close connection
+
+mysqli_close($pcon);
+?>

@@ -1,0 +1,208 @@
+<?php include 'header.php';?>
+<body id="body">
+<?php include 'navbar.php';?>
+
+
+<section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Placeefy</h1>
+          <p>"Just Get Comfortable Out Of Your Comfort Zone"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="about-img">
+					<img class="img-responsive" src="images/comapny/about.jpg">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h2 class="mt-40">Our Story</h2>
+				<p>Moving to a new city or getting comfortable in a new city is a very hectic task for the students as well as for their parents and a huge problem for the company employees. We noticed various problem on the current system that</p>
+				<p>Before the 2-3 month of shifting to a new place, most people had questions especially related to accommodation and food/mess facilities.<br>The way people find these services is by mere reference of each other and as a result, when they start using those services, they find many flaws in the service and change their service every 2-3 month.<br> But, if they had every knowledge like its quality, prices and much more about that service before, they might not have chosen that service. <br>So we decided, Why not provide everyone the power to gain that knowledge so they can compare various services on their own and hence after working upon this idea we finally launched our web-based service startup PLACEEFY- Places Electronically Available For You.</p>
+				<a href="#" class="btn btn-small mt-20">Download Company Profile</a>
+			</div>
+		</div>
+		<!-- <div class="row counter-box text-center mt-50">
+			<div class="col-md-2">
+				<div class="counter-item">
+	                <i class="ion-ios-flask-outline"></i>
+	                <h4 class="counter">349</h4>
+	                <span>Completed Projects</span>
+	            </div>
+			</div>
+			<div class="col-md-2">
+				<div class="counter-item">
+	                <i class="ion-ios-flame-outline"></i>
+	                <h4 class="counter">349</h4>
+	                <span>Lines Of Code</span>
+	            </div>
+			</div>
+			<div class="col-md-2">
+				<div class="counter-item">
+	                <i class="ion-ios-pint-outline"></i>
+	                <h4 class="counter">349</h4>
+	                <span>Satisfied Customer</span>
+	            </div>
+			</div>
+			<div class="col-md-2">
+				<div class="counter-item">
+	                <i class="ion-ios-wineglass-outline"></i>
+	                <h4 class="counter">349</h4>
+	                <span>Awards Winner</span>
+	            </div>
+			</div>
+
+			<div class="col-md-2">
+				<div class="counter-item">
+	                <i class="ion-ios-chatboxes-outline"></i>
+	                <h4 class="counter">349</h4>
+	                <span>Satisfied Customer</span>
+	            </div>
+			</div>
+			<div class="col-md-2">
+				<div class="counter-item">
+	                <i class="ion-ios-body-outline"></i>
+	                <h4 class="counter">349</h4>
+	                <span>Awards Winner</span>
+	            </div>
+			</div>
+		</div> -->
+	</div>
+</section>
+
+
+<section class="about-feature bg-dark section dark-service">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title">
+					<h2>Our 3 Major Goals</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="service-item">
+		          <i class="ion-ios-color-filter-outline"></i>
+		          <h4>1. Comfortability</h4>
+		          <p>To make everyone feel comfortable out Of there comfort zone.</p>
+		        </div>
+			</div>
+			<div class="col-md-4">
+				<div class="service-item">
+		          <i class="ion-ios-unlocked-outline"></i>
+		          <h4>2. Security</h4>
+		          <p>We strive hard to provide the level of security to the outsiders when they are apart from there actual home.</p>
+		        </div>
+			</div>
+			<div class="col-md-4">
+				<div class="service-item">
+		          <i class="ion-ios-game-controller-b-outline"></i>
+		          <h4>3. Business Growth</h4>
+		          <p>We want the growth of small businesses and hence want to take the India to the next level. </p>
+		        </div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+
+<section class="testimonial section-sm">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="testimonial-carousel text-center">
+		          <div  class="testimonial-slider owl-carousel">
+		            <div>
+              <i class="ion-quote"></i>
+              <p>"Placeefy is a brand new web based service startup for the students, employees and other outsiders. We help those needy outsider to find the best and affordable room, mess, hostel and tiffin Services near their desired locations."</p>
+              <div class="user">
+                <img src="images/item-img1.png" alt="Pepole">
+                <p><span>Wishvesh Ujawane</span> CEO-Placeefy</p>
+              </div>
+            </div>
+		            <div>
+              <i class="ion-quote"></i>
+              <p>"Placeefy is a brand new web based service startup for the students, employees and other outsiders. We help those needy outsider to find the best and affordable room, mess, hostel and tiffin Services near their desired locations."</p>
+              <div class="user">
+                <img src="images/item-img1.png" alt="Pepole">
+                <p><span>Wishvesh Ujawane</span> CEO-Placeefy</p>
+              </div>
+            </div>
+		            <div>
+              <i class="ion-quote"></i>
+              <p>"Placeefy is a brand new web based service startup for the students, employees and other outsiders. We help those needy outsider to find the best and affordable room, mess, hostel and tiffin Services near their desired locations."</p>
+              <div class="user">
+                <img src="images/item-img1.png" alt="Pepole">
+                <p><span>Wishvesh Ujawane</span> CEO-Placeefy</p>
+              </div>
+            </div>
+		            <div>
+		              <i class="ion-quote"></i>
+		              <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+		              <div class="user">
+		                <img src="images/item-img1.jpg" alt="Pepole">
+		                <p><span>Rose Ray</span> CEO-Themefisher</p>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+			</div>
+			<div class="col-md-6">
+				<div class="tabCommon">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#vision" data-toggle="tab">Vision</a></li>
+						<li><a href="#mission" data-toggle="tab">Mission</a></li>
+						<li><a href="#approch" data-toggle="tab">Approach</a></li>
+					</ul>
+					<div class="tab-content">
+						<div id="vision" class="tab-pane fade active in">
+							<p>We saw a world where everyone is comfortable out of there comfort zone. No matter he/she is a student, an employee or an outsider who visits a new city just for fun.</p>
+						</div>
+						<div id="mission" class="tab-pane fade">
+							<p>To create a platform that continues to be recognized for its contribution to the growth of small businesses. A platform where users can find comfortable and affordable services and service providers can able to promote there services.</p>
+						</div>
+						<div id="approch" class="tab-pane fade">
+							<p>By using the brain and butter behind the technology, and the dedication of our team we will make everything as much easier as possible to bring there next comfortable home on phone with placeefy.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<!-- <section class="call-to-action bg-1 section-sm overly">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h2>We design delightful digital experiences.</h2>
+					<p>Read more about what we do and our philosophy of design. Judge for yourself The work and results <br> we’ve achieved for other clients, and meet our highly experienced Team who just love to design.</p>
+					<a class="btn btn-main btn-solid-border" href="#" >Tell Us Your Story</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+ <?php 
+    include 'navbar-bottom.php';
+    include 'footer.php';?>
+
+
+  </body>
+  </html>

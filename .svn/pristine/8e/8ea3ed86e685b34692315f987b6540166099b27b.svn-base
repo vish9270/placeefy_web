@@ -1,0 +1,60 @@
+<?php
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+			
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		
+		}
+
+	if(isset($_POST['service']))
+		{
+			$service=$_POST['service'];
+		
+		}
+	if(isset($_POST['servicetype']))
+		{
+			$servicetype=$_POST['servicetype'];
+		
+		}
+	if(isset($_POST['servicesubtype']))
+		{
+			$servicesubtype=$_POST['servicesubtype'];
+		}
+// attempt insert query execution
+$sql = "INSERT INTO service_detail (pid, eid, service, servicetype, servicesubtype) VALUES ('$pid', '$eid','$service', '$servicetype', '$servicesubtype')";
+
+if(mysqli_query($pcon, $sql))
+{
+	$sid=mysqli_insert_id($pcon);
+	
+	if($service=='Food')
+	{
+		header("Location:fs_customer_serving.php?id=1&eid=$eid&pid=$pid&sid=$sid&servicetype=$servicetype");
+	}
+	else if($service=='Accommodation')
+	{
+		header("Location:listing_detail_2.php?id=1&eid=$eid&pid=$pid&sid=$sid&servicetype=$servicetype");
+	}
+} 
+else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+	}
+	
+// close connection
+mysqli_close($pcon);
+?>
+
+
+
+
+
+
+

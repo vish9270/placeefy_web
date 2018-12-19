@@ -1,0 +1,445 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Placeefy| Thank you</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/nice-select.css">							
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/jquery-ui.css">			
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		<body>	
+			  <header id="header">
+		  	
+			    <div class="fluid-container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+			    		<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>		
+						<nav id="nav-menu-container">
+							<ul class="nav-menu">
+							  <li class="menu-active"><a href="provider.html">Become a service provider</a></li>
+							  <li><a href="login.html">Login</a></li>
+							  <li><a href="signup.html">SignUp</a></li>
+							  <li><a href="about.html">About Us</a></li>
+							  <li><a href="help.html">Help</a></li>
+							  <!-- <li class="menu-has-children"><a href="">Blog</a>
+							    <ul>
+							      <li><a href="blog-home.html">Blog Home</a></li>
+							      <li><a href="blog-single.html">Blog Single</a></li>
+							      <li class="menu-has-children"><a href="">Level 2</a>
+							        <ul>
+							          <li><a href="#">Item One</a></li>
+							          <li><a href="#">Item Two</a></li>
+							        </ul>
+							      </li>					              
+							    </ul>
+							  </li>
+							  <li><a href="elements.html">Elements</a></li>							  			          	          
+							  <li><a href="contact.html">Contact</a></li> -->
+							</ul>
+						</nav><!-- #nav-menu-container -->		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+				<div class="overlay overlay-bg"></div>	
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-between">
+						<div class="banner-content col-lg-6 col-md-6 ">
+							<h6 class="text-white ">Placeefy team would like to say</h6>
+							<h1 class="text-uppercase" style="font-family: Bell MT;">
+								Thank You!!		
+							</h1>
+							<p class="pt-10 pb-10 text-white">
+								for using over services. 
+							</p>
+							<!--<a href="#" class="primary-btn text-uppercase">Just Get Started</a> -->
+						</div>
+						<div class="col-lg-4  col-md-6 header-right">
+							<h4 class="pb-30">If you suffer any problem regarding our service or any kind of suggestion is most welcome.</h4>
+							<form class="form">
+							    <div class="from-group">
+									<textarea class="form-control txt-field" type="textarea" name="name" placeholder="Comment/Suggestion"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Comment/Suggestion'"></textarea>		
+							    <br>    
+							    <div class="form-group">
+
+							            <button class="btn btn-default btn-lg btn-block text-center text-uppercase">Submit</button>
+
+							    </div>
+							</form>
+						</div>											
+					</div>
+				</div>					
+			</section>
+
+
+<br>
+			<!-- End banner Area -->	
+
+			<!-- Start home-about Area -->
+			<!-- <section class="home-about-area section-gap">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 about-left">
+							<img class="img-fluid" src="img/about-img.jpg" alt="">
+						</div>
+						<div class="col-lg-6 about-right">
+							<h1>Globally Connected
+							by Large Network</h1>
+							<h4>We are here to listen from you deliver exellence</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.								
+							</p>
+							<a class="text-uppercase primary-btn" href="#">Get Details</a>
+						</div>
+					</div>
+				</div>	
+			</section> -->
+			<!-- End home-about Area -->
+			
+			<!-- Start services Area -->
+			<!-- <section class="services-area pb-120">
+				<div class="container">
+					<div class="row section-title">
+						<h1>Our Services</h1>
+						<p>Services which are extremely important for an outsider</p>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 single-service">
+							<img src="img/house1.jpg" alt="room" width="300px" height="150px">
+							<p>
+							 <span class="lnr lnr-home"></span>-->
+							<!-- <a href="#"><h4>Room Services</h4></a>
+							<p>
+								Find the best room service in an affordable price suitable for you having all the basic amenities that you need.
+							</p> 
+						</div>
+						<div class="col-lg-4 single-service">
+							<img src="img/tiffin1.jpg" alt="room" width="300px" height="150px">
+							<p>
+							<span class="lnr lnr-home"></span>-->
+							<!--<a href="#"><h4>Mess/Tiffin Services</h4></a>
+							<p>
+								Find the best room service in an affordable price suitable for you having all the basic amenities that you need.
+							</p> 
+						</div>
+						<div class="col-lg-4 single-service">
+							<img src="img/room1.jpg" alt="room" width="300px" height="150px">
+							<p>
+							<span class="lnr lnr-home"></span>-->
+							<!--<a href="#"><h4>Hostel Services</h4></a>
+							<p>
+								Find the best room service in an affordable price suitable for you having all the basic amenities that you need.
+							</p> 
+						</div>												
+					</div>	
+				</div>	
+			</section> -->
+			<!-- End services Area -->
+			
+			<!-- Start image-gallery Area -->
+			<!-- <section class="image-gallery-area section-gap">
+				<div class="container">
+					<div class="row section-title">
+						<h1>Image Gallery that we like to share</h1>
+						<p>Who are in extremely love with eco friendly system.</p>
+					</div>					
+					<div class="row">
+						<div class="col-lg-4 single-gallery">
+							<a href="img/g1.jpg" class="img-gal"><img class="img-fluid" src="img/g1.jpg" alt=""></a>
+							<a href="img/g4.jpg" class="img-gal"><img class="img-fluid" src="img/g4.jpg" alt=""></a>
+						</div>	
+						<div class="col-lg-4 single-gallery">
+							<a href="img/g2.jpg" class="img-gal"><img class="img-fluid" src="img/g2.jpg" alt=""></a>
+							<a href="img/g5.jpg" class="img-gal"><img class="img-fluid" src="img/g5.jpg" alt=""></a>						
+						</div>	
+						<div class="col-lg-4 single-gallery">
+							<a href="img/g3.jpg" class="img-gal"><img class="img-fluid" src="img/g3.jpg" alt=""></a>
+							<a href="img/g6.jpg" class="img-gal"><img class="img-fluid" src="img/g6.jpg" alt=""></a>
+						</div>				
+					</div>
+				</div>	
+			</section> -->
+			<!-- End image-gallery Area -->
+			
+			<!-- Start reviews Area -->
+			<!-- <section class="reviews-area section-gap">
+				<div class="container">
+					<div class="row section-title">
+						<h1>Client’s Reviews</h1>
+						<p>Who are in extremely love with eco friendly system.</p>
+					</div>					
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<div class="single-review">
+								<h4>Cody Hines</h4>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+								<div class="star">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-md-6">
+							<div class="single-review">
+								<h4>Chad Herrera</h4>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+								<div class="star">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-md-6">
+							<div class="single-review">
+								<h4>Andre Gonzalez</h4>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+								<div class="star">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-md-6">
+							<div class="single-review">
+								<h4>Jon Banks</h4>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+								<div class="star">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-md-6">
+							<div class="single-review">
+								<h4>Landon Houston</h4>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+								<div class="star">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+						</div>	
+						<div class="col-lg-4 col-md-6">
+							<div class="single-review">
+								<h4>Nelle Wade</h4>
+								<p>
+									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+								</p>
+								<div class="star">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+						</div>																															
+					</div>
+				</div>	
+			</section> -->
+			<!-- End reviews Area -->
+							
+			<!-- Start home-calltoaction Area -->
+			<!-- <section class="home-calltoaction-area relative">
+				<div class="container">
+					<div class="overlay overlay-bg"></div>
+					<div class="row align-items-center section-gap">
+						<div class="col-lg-8">
+							<h1>Want to grow your business?</h1>
+							<p>
+								Become a service provider, list your service and We will showcase it  to the world <b>FREE OF COST</b>.
+							</p>
+						</div>
+						<div class="col-lg-4 btn-right">
+								<a href="provider.html" class="primary-btn">Get Started</a>
+							</div>
+					</div>
+				</div>	
+			</section> -->
+			<!-- End home-calltoaction Area -->
+			
+			<!-- Start latest-blog Area -->
+			<section class="latest-blog-area section-gap">
+				<div class="container"> 
+					<!-- <div class="row section-title">
+						<h1>Latest News from our Blog</h1>
+						<p>Who are in extremely love with eco friendly system.</p>
+					</div>						
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="single-latest-blog">
+								<div class="thumb">
+									<img class="img-fluid" src="img/b1.jpg" alt="">
+								</div>
+								<ul class="tags">
+									<li><a href="#">Travel</a></li>
+									<li><a href="#">Life Style</a></li>
+								</ul>
+								<a href="#">
+									<h4>Portable latest Fashion for young women</h4>
+								</a>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
+								</p>
+								<p class="date">31st January, 2018</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="single-latest-blog">
+								<div class="thumb">
+									<img class="img-fluid" src="img/b2.jpg" alt="">
+								</div>
+								<ul class="tags">
+									<li><a href="#">Travel</a></li>
+									<li><a href="#">Life Style</a></li>
+								</ul>
+								<a href="#">
+									<h4>Portable latest Fashion for young women</h4>
+								</a>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.
+								</p>
+								<p class="date">31st January, 2018</p>
+							</div>
+						</div>						
+					</div> -->
+				</div>	
+			</section>
+			<!-- End latest-blog Area -->
+			
+			<!-- start footer Area -->		
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<p><b>Placeefy</b> is a web-based service startup where people can find the best and affordable rooms, mess, tiffin and hostel service in just a few clicks.</p>							
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Features</h6>
+								<ul>
+									<li><a href="provider.html">Get Listed</a></li>
+									<li><a href="career.html">We're Hiring</a></li>
+									<li><a href="#">Official Placeefy Blog</a></li>
+									<li><a href="#">Terms of Service</a></li>
+								</ul>								
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>About</h6>
+								<ul>
+									<li><a href="#">Know more about us</a></li>
+									<li><a href="#">Our Team</a></li>
+									<li><a href="#">Our Services</a></li>
+									<li><a href="#">Where we are?</a></li>
+								</ul>								
+							</div>
+						</div>												
+						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+							<div class="single-footer-widget">
+								<h6>Follow Us</h6>
+								<p>Let us be social</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+							</div>
+						</div>							
+						<div class="col-lg-4  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Contact Us</h6>
+								<p>Having any queries? Please connect with us at:</p>
+								<p>+91-814907298</p>
+								<p>support@placeefy.com</p>
+								<!-- <div class="" id="mc_embed_signup">
+									<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+			                            	<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+			                            	<div style="position: absolute; left: -5000px;">
+												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+											</div>
+
+										<div class="info"></div>
+									</form>
+								</div> -->
+							</div>
+						</div>	
+						<hr>
+						<p class="mt-80 mx-auto footer-text col-lg-12">
+							
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with<i class="fa fa-heart-o" aria-hidden="true"></i> in Nagpur by <a href="https://placeefy.com" target="_blank">Placeefy Technologies</a>
+
+						</p>											
+					</div>
+				</div>
+				<img class="footer-bottom" src="img/footer-bottom.png" alt="">
+			</footer>	
+			<!-- End footer Area -->	
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+ 			<script src="js/jquery-ui.js"></script>								
+			<script src="js/jquery.nice-select.min.js"></script>							
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>	
+		</body>
+	</html>

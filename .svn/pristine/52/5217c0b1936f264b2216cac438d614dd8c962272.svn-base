@@ -1,0 +1,61 @@
+<?php
+
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+// Escape user inputs for security
+if (isset($_POST['gender'])){
+			$gender= $_POST['gender'];
+	}
+if (isset($_POST['student'])){
+			$student= $_POST['student'];
+	}
+	else
+		$student='0';
+
+if (isset($_POST['employee'])){
+			$employee= $_POST['employee'];
+	}
+	else
+		$employee='0';
+if (isset($_POST['family'])){
+			$family= $_POST['family'];
+	}
+	else
+		$family='0';
+	if (isset($_POST['traveler'])){
+			$traveler= $_POST['traveler'];
+	}
+	else
+		$traveler='0';
+
+	if (isset($_POST['age_group'])){
+			$age_group= $_POST['age_group'];
+	}
+
+$suitable_for=$student.'-'.$employee.'-'.$family.'-'.$traveler;
+
+$eid= mysqli_real_escape_string($pcon, $_POST['eid_pass']);
+$pid= mysqli_real_escape_string($pcon, $_POST['pid_pass']);
+$sid= mysqli_real_escape_string($pcon, $_POST['sid_pass']);
+
+$sql="UPDATE service_detail SET 
+	gender=$gender,
+	suitable_for='$suitable_for',
+	age_group='$age_group'
+	WHERE s_id=$sid";
+	if(mysqli_query($pcon, $sql))
+		{
+				
+			header("Location:create_new.php?id=1&eid=$eid&sid=$sid&pid=$pid");
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+		
+
+// close connection
+
+mysqli_close($pcon);
+?>

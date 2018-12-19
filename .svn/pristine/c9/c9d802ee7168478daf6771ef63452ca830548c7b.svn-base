@@ -1,0 +1,64 @@
+<?php
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+// Escape user inputs for security
+if (isset($_POST['app'])){
+			$app = $_POST['app'];
+	}
+	else $app=0;
+
+if (isset($_POST['physical'])){
+			$physical = $_POST['physical'];
+	}
+	else $physical=0;
+
+if (isset($_POST['calling'])){
+			$calling = $_POST['calling'];
+	}
+	else $calling=0;
+
+	
+
+	//Creating an string
+$vacancy_notify=$app.'-'.$physical.'-'.$calling;
+
+
+	if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		}
+	if(isset($_POST['bid_pass']))
+		{
+			$bid=$_POST['bid_pass'];
+		}
+
+
+// attempt insert query execution
+
+$sql="UPDATE business_details SET 
+	vacancy='$vacancy_notify'
+	WHERE bid=$bid";
+	if(mysqli_query($pcon, $sql))
+		{
+				
+			header("Location:rented_before.php?id=1&eid=$eid&sid=$sid&pid=$pid&bid=$bid");
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+
+// close connection
+
+mysqli_close($pcon);
+?>

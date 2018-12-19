@@ -1,0 +1,60 @@
+<?php
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+//Signature in image/svg+xml;base64
+        $signdatapair0=""; $signdatapair1="";
+        if(isset($_POST['signdatapair0'])){
+ 		$signdatapair0 = $_POST['signdatapair0'];
+ 		}
+ 		
+ 		if(isset($_POST['signdatapair1'])){
+ 		$signdatapair1 = $_POST['signdatapair1'];
+ 		}
+
+//agree_check_hostel
+if (isset($_POST['agree_check'])){
+			$agree_check = $_POST['agree_check'];
+			
+	}
+
+	if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		}
+	if(isset($_POST['bid_pass']))
+		{
+			$bid=$_POST['bid_pass'];
+		}
+
+
+$sql="UPDATE business_details SET 
+	signdatapair0='$signdatapair0', 
+	signdatapair1='$signdatapair1', 
+	agree_check='$agree_check'
+	WHERE bid=$bid";
+	echo $sql;
+	if(mysqli_query($pcon, $sql))
+		{
+				
+			header("Location:thanks_page.php?id=1&eid=$eid&sid=$sid&pid=$pid&bid=$bid");
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+
+// close connection
+
+mysqli_close($pcon);
+?>
+

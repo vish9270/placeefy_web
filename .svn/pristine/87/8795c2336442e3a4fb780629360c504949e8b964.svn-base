@@ -1,0 +1,51 @@
+<?php
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+$deposit = mysqli_real_escape_string($pcon, $_POST['deposit']);
+$days_off = mysqli_real_escape_string($pcon, $_POST['days_off']);
+
+
+if (isset($_POST['offer'])){
+			$offer = $_POST['offer'];
+	}
+
+	if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		}
+	if(isset($_POST['bid_pass']))
+		{
+			$bid=$_POST['bid_pass'];
+		}
+
+
+// attempt insert query execution
+
+$sql="UPDATE business_details SET 
+	deposit='$deposit',
+	days_off='$days_off',
+	offer='$offer'
+	WHERE bid=$bid";
+	if(mysqli_query($pcon, $sql))
+		{
+				
+			header("Location:photo_section.php?id=1&eid=$eid&sid=$sid&pid=$pid&bid=$bid");
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+
+// close connection
+
+mysqli_close($pcon);
+?>

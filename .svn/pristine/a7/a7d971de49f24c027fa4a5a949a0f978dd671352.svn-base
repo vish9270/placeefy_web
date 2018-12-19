@@ -1,0 +1,450 @@
+<?php include 'header.php';?>
+
+<body id="body">
+
+<!-- Header Start -->
+<header class="navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- header Nav Start -->
+				<nav class="navbar">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html">
+								<img src="images/logo.png" alt="Logo">
+							</a>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="index.html">Home</a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio <span class="ion-ios-arrow-down"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="portfolio.html">Portfolio Filter</a></li>
+										<li><a href="portfolio-single.html">Portfolio Single</a></li>
+									</ul>
+								</li>
+								<li><a href="service.html">Service</a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="ion-ios-arrow-down"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="blog-grid.html">Blog Grid</a></li>
+										<li><a href="blog-single.html">Blog Single</a></li>
+										<li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+										<li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+										<li><a href="blog-full-width.html">Blog Full Width</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="ion-ios-arrow-down"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="about.html">About Us</a></li>
+										<li><a href="coming-soon.html">Coming Soon</a></li>
+										<li><a href="404.html">404 Page</a></li>
+										<li><a href="faq.html">FAQ</a></li>
+										<li><a href="pricing.html">Pricing Table</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+							</div><!-- /.navbar-collapse -->
+							</div><!-- /.container-fluid -->
+						</nav>
+					</div>
+				</div>
+			</div>
+			</header><!-- header close -->
+
+<section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Service</h1>
+          <p>Services which are extremely important for an outsider are now under a single roof, <br>Just
+find it and "Get Comfortable" in the new city.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="service-about section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+
+				<h2>Please fill this form to avail our services:</h2>
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4mTNkkaCL1slmXdohj4xnkBeJHAO3C9xwzquIUdgAbM6JgQ/viewform?embedded=true" width="100%" height="400" frameborder="1" marginheight="0" marginwidth="0">Hold on a second...</iframe>
+			</div>
+			<div class="col-md-6">
+				<img class="img-responsive" src="images/company/outsider-img2.png">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="service-arrow">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 bg-primary">
+				<div class="block">
+					<i class="fas fa-rupee-sign"></i>
+					<h3>Affordable Price Rates</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim impedit repudiandae omnis est temporibus.</p>
+				</div>
+			</div>
+			<div class="col-md-4 bg-primary bg-primary-dark">
+				<div class="block">
+					<i class="fas fa-check"></i>
+					<h3>Quality Assurance</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim impedit repudiandae omnis est temporibus.</p>
+				</div>
+			</div>
+			<div class="col-md-4 bg-primary bg-primary-darker">
+				<div class="block">
+					<i class="fas fa-hand-holding-usd"></i>
+					<h3>Discounts, Offers & Perks</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe enim impedit repudiandae omnis est temporibus.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- <section class="service-list section bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-title text-center">
+					<h2>Where we are?</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="block">
+					<h4>User research</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Product marketing</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Visual design</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Front-end engineering</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Usability testing & analytics</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Design sprints & prototyping</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+
+<section class="portfolio-work">
+  <div class="container">
+  	<div class="row">
+			<div class="col-md-12">
+				<div class="section-title text-center">
+					<h2>Where we are?</h2>
+				</div>
+			</div>
+		</div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="portfolio-menu">
+            <ul>
+              <li class="filter" data-filter="all">Nagpur</li>
+              <li class="filter" data-filter=".Nandanvan">Nandanvan</li>
+              <li class="filter" data-filter=".Hingna">Hingna Road</li>
+              <li class="filter" data-filter=".Chatrapati">Chatrapati Square</li>
+              <li class="filter" data-filter=".Sitabardi">Sitabardi</li>
+              <li class="filter" data-filter=".Mahal">Mahal</li>
+              <li class="filter" data-filter=".Dharampeth">Dharampeth</li>
+              <li class="filter" data-filter=".Gitti">Gitti Khadan</li>
+              <li class="filter" data-filter=".Sadar">Sadar</li>
+              <li class="filter" data-filter=".Manewada">Manewada</li>
+              <li class="filter" data-filter=".Sakardara">Sakardara</li>
+              <li class="filter" data-filter=".Manish">Manish Nagar</li>
+              <li class="filter" data-filter=".Wanadongri">Wanadongri</li>
+              <li class="filter" data-filter=".IT">IT Park</li>
+              <li class="filter" data-filter=".Mihan">Mihan</li>
+
+            </ul>
+          </div>
+          <div class="portfolio-contant">
+            <ul class="portfolio-contant-active text-center portfolio-popup">
+              <li class="mix Nandanvan">
+                <a class="portfolio-popup" href="images/portfolio/work1.jpg">
+                  <img src="images/portfolio/work1.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Rio Furniture</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Hingna">
+                <a  href="images/portfolio/work2.jpg">
+                  <img src="images/portfolio/work2.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Behance Design</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Chatrapati">
+                <a href="images/portfolio/work3.jpg">
+                  <img src="images/portfolio/work3.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Brothers Furniture</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Sitabardi">
+                <a href="images/portfolio/work4.jpg">
+                  <img src="images/portfolio/work4.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Adestra Cookup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Mahal">
+                <a href="images/portfolio/work5.jpg">
+                  <img src="images/portfolio/work5.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Texas Boxing</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                      
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Dharampeth">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix Gitti">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Sadar">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+                <li class="mix Manewada">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Sakardara">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix Manish">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix Wanadongri">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix IT">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix Mihan">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="call-to-action bg-1 section-sm overly">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h2>Earning Opportunity For the Outsider</h2>
+					<p>If you find any room, mess or tiffin service provider near you. Refer it to Placeefy and get paid for every <br> Verified Listing you made.</p>
+					<a class="btn btn-main btn-solid-border" href="#" >Know More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- footer Start -->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="footer-manu">
+					<ul>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">How it works</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Terms</a></li>
+					</ul>
+				</div>
+				<p class="copyright">Copyright 2018 &copy; Design & Developed by <a href="http://www.themefisher.com">themefisher.com</a>. All rights reserved.
+					<br>
+					Get More <a href="https://themefisher.com/free-bootstrap-templates/" target="_blank">Free Bootstrap Templates</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    
+    <!-- <script src="js/jquery.counterup.js"></script> -->
+    
+    <!-- Main jQuery -->
+   
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <!--  -->
+    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <!-- Mixit Up JS -->
+    <script src="plugins/mixitup/dist/mixitup.min.js"></script>
+    <!-- <script src="plugins/count-down/jquery.lwtCountdown-1.0.js"></script> -->
+    <script src="plugins/SyoTimer/build/jquery.syotimer.min.js"></script>
+
+
+    <!-- Form Validator -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+
+
+    
+    <!-- Google Map -->
+    <script src="plugins/google-map/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
+
+    <script src="js/script.js"></script>
+    
+
+
+
+  </body>
+  </html>

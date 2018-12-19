@@ -1,0 +1,212 @@
+<?php
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		}
+	if(isset($_POST['bid_pass']))
+		{
+			$bid=$_POST['bid_pass'];
+		}
+
+
+$rates = "{";
+$m_rate_per_thali_stu_veg="";	
+	if(isset($_POST['m_rate_per_thali_stu_veg'])){
+		$rates = $rates."mrptsv:".$_POST['m_rate_per_thali_stu_veg'].",";
+ 		
+ 		}
+ 		$m_rate_per_thali_emp_veg="";	
+	if(isset($_POST['m_rate_per_thali_emp_veg'])){
+		$rates = $rates."mrptev:".$_POST['m_rate_per_thali_emp_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_per_thali_stu_nonveg="";	
+	if(isset($_POST['m_rate_per_thali_stu_nonveg'])){
+		$rates = $rates."mrptsn:".$_POST['m_rate_per_thali_stu_nonveg'].",";
+ 		
+ 		}
+ 	
+ 	$m_rate_per_thali_emp_nonveg="";	
+	if(isset($_POST['m_rate_per_thali_emp_nonveg'])){
+		$rates = $rates."mrpten:".$_POST['m_rate_per_thali_emp_nonveg'].",";
+ 
+ 		}
+
+
+$m_rate_per_tiffin_stu_veg="";	
+	if(isset($_POST['m_rate_per_tiffin_stu_veg'])){
+		$rates = $rates."mrpfsv:".$_POST['m_rate_per_tiffin_stu_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_per_tiffin_emp_veg="";	
+	if(isset($_POST['m_rate_per_tiffin_emp_veg'])){
+		$rates = $rates."mrpfev:".$_POST['m_rate_per_tiffin_emp_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_per_tiffin_stu_nonveg="";	
+	if(isset($_POST['m_rate_per_tiffin_stu_nonveg'])){
+		$rates = $rates."mrpfsn:".$_POST['m_rate_per_tiffin_stu_nonveg'].",";
+ 		
+ 		}
+
+ 		$m_rate_per_tiffin_emp_nonveg="";	
+	if(isset($_POST['m_rate_per_tiffin_emp_nonveg'])){
+		$rates = $rates."mrpfen:".$_POST['m_rate_per_tiffin_emp_nonveg'].",";
+ 		
+ 		}
+
+$m_rate_one_time_per_month_mess_stu_veg="";	
+	if(isset($_POST['m_rate_one_time_per_month_mess_stu_veg'])){
+		$rates = $rates."mrotpmmsv:".$_POST['m_rate_one_time_per_month_mess_stu_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_one_time_per_month_mess_emp_veg="";	
+	if(isset($_POST['m_rate_one_time_per_month_mess_emp_veg'])){
+		$rates = $rates."mrotpmmev:".$_POST['m_rate_one_time_per_month_mess_emp_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_one_time_per_month_mess_stu_nonveg="";	
+	if(isset($_POST['m_rate_one_time_per_month_mess_stu_nonveg'])){
+		$rates = $rates."mrotpmmsn:".$_POST['m_rate_one_time_per_month_mess_stu_nonveg'].",";
+ 		
+ 		}
+
+ 		$m_rate_one_time_per_month_mess_emp_nonveg="";	
+	if(isset($_POST['m_rate_one_time_per_month_mess_emp_nonveg'])){
+		$rates = $rates."mrotpmmen:".$_POST['m_rate_one_time_per_month_mess_emp_nonveg'].",";
+ 		
+ 		}
+
+ 		$m_rate_one_time_per_month_tiffin_stu_veg="";	
+	if(isset($_POST['m_rate_one_time_per_month_tiffin_stu_veg'])){
+		$rates = $rates."mrotpmfsv:".$_POST['m_rate_one_time_per_month_tiffin_stu_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_one_time_per_month_tiffin_emp_veg="";	
+	if(isset($_POST['m_rate_one_time_per_month_tiffin_emp_veg'])){
+		$rates = $rates."mrotpmfev:".$_POST['m_rate_one_time_per_month_tiffin_emp_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_one_time_per_month_tiffin_stu_nonveg="";	
+	if(isset($_POST['m_rate_one_time_per_month_tiffin_stu_nonveg'])){
+		$rates = $rates."mrotpmfsn:".$_POST['m_rate_one_time_per_month_tiffin_stu_nonveg'].",";
+ 		
+ 		}
+
+ 		$m_rate_one_time_per_month_tiffin_emp_nonveg="";	
+	if(isset($_POST['m_rate_one_time_per_month_tiffin_emp_nonveg'])){
+		$rates = $rates."mrotpmfen:".$_POST['m_rate_one_time_per_month_tiffin_emp_nonveg'].",";
+ 		
+ 		}
+
+$m_rate_two_time_per_month_mess_stu_veg="";	
+	if(isset($_POST['m_rate_two_time_per_month_mess_stu_veg'])){
+		$rates = $rates."mrttpmmsv:".$_POST['m_rate_two_time_per_month_mess_stu_veg'].",";
+ 		
+ 		}
+
+$m_rate_two_time_per_month_mess_emp_veg="";	
+	if(isset($_POST['m_rate_two_time_per_month_mess_emp_veg'])){
+		$rates = $rates."mrttpmmev:".$_POST['m_rate_two_time_per_month_mess_emp_veg'].",";
+ 		
+ 		}
+
+$m_rate_two_time_per_month_mess_stu_nonveg="";	
+	if(isset($_POST['m_rate_two_time_per_month_mess_stu_nonveg'])){
+		$rates = $rates."mrttpmmsn:".$_POST['m_rate_two_time_per_month_mess_stu_nonveg'].",";
+ 		
+ 		}
+
+$m_rate_two_time_per_month_mess_emp_nonveg="";	
+	if(isset($_POST['m_rate_two_time_per_month_mess_emp_nonveg'])){
+		$rates = $rates."mrttpmmen:".$_POST['m_rate_two_time_per_month_mess_emp_nonveg'].",";
+ 		
+ 		}
+
+ 		$m_rate_two_time_per_month_tiffin_stu_veg="";	
+	if(isset($_POST['m_rate_two_time_per_month_tiffin_stu_veg'])){
+		$rates = $rates."mrttpmfsv:".$_POST['m_rate_two_time_per_month_tiffin_stu_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_two_time_per_month_tiffin_emp_veg="";	
+	if(isset($_POST['m_rate_two_time_per_month_tiffin_emp_veg'])){
+		$rates = $rates."m_rate_two_time_per_month_tiffin_emp_veg:".$_POST['m_rate_two_time_per_month_tiffin_emp_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_two_time_per_month_tiffin_stu_nonveg="";	
+	if(isset($_POST['m_rate_two_time_per_month_tiffin_stu_nonveg'])){
+		$rates = $rates."m_rate_two_time_per_month_tiffin_stu_nonveg:".$_POST['m_rate_two_time_per_month_tiffin_stu_nonveg'].",";
+ 		
+ 		}
+
+$m_rate_two_time_per_month_tiffin_emp_nonveg="";	
+	if(isset($_POST['m_rate_two_time_per_month_tiffin_emp_nonveg'])){
+		$rates = $rates."m_rate_two_time_per_month_tiffin_emp_nonveg:".$_POST['m_rate_two_time_per_month_tiffin_emp_nonveg'].",";
+ 		
+ 		}
+
+ 		$m_rate_complete_day_stu_veg="";	
+	if(isset($_POST['m_rate_complete_day_stu_veg'])){
+		$rates = $rates."m_rate_complete_day_stu_veg:".$_POST['m_rate_complete_day_stu_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_complete_day_emp_veg="";	
+	if(isset($_POST['m_rate_complete_day_emp_veg'])){
+		$rates = $rates."m_rate_complete_day_emp_veg:".$_POST['m_rate_complete_day_emp_veg'].",";
+ 		
+ 		}
+
+ 		$m_rate_complete_day_stu_nonveg="";	
+	if(isset($_POST['m_rate_complete_day_stu_nonveg'])){
+		$rates = $rates."m_rate_complete_day_stu_nonveg:".$_POST['m_rate_complete_day_stu_nonveg'].",";
+ 		
+ 		}
+
+$m_rate_complete_day_emp_nonveg="";	
+	if(isset($_POST['m_rate_complete_day_emp_nonveg'])){
+		$rates = $rates."m_rate_complete_day_emp_nonveg:".$_POST['m_rate_complete_day_emp_nonveg'].",";
+ 		
+ 		}
+        $rates = rtrim($rates,",");
+
+        $rates = $rates."}";
+
+
+$sql="UPDATE business_details SET 
+	mess_rates='$rates'
+	WHERE bid=$bid";
+	if(mysqli_query($pcon, $sql))
+		{
+				
+			header("Location:mess_offers.php?id=1&eid=$eid&sid=$sid&pid=$pid&bid=$bid");
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+
+// close connection
+
+mysqli_close($pcon);
+?>

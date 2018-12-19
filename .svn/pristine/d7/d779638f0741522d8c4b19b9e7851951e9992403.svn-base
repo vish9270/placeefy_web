@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+  <html lang="zxx" class="no-js">
+  <head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Placeefy| Food and Accommodations Services</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+      <!--
+      CSS
+      ============================================= -->
+      <link rel="stylesheet" href="../css/linearicons.css">
+      <link rel="stylesheet" href="../css/font-awesome.min.css">
+      <link rel="stylesheet" href="../css/bootstrap.css">
+      <link rel="stylesheet" href="../css/magnific-popup.css">
+      <link rel="stylesheet" href="../css/nice-select.css">             
+      <link rel="stylesheet" href="../css/animate.min.css">
+      <link rel="stylesheet" href="../css/jquery-ui.css">     
+      <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+
+       <?php  if(isset($_GET['eid']))
+            {
+              $eid=$_GET['eid'];
+            }
+            if(isset($_GET['pid']))
+            {
+              $pid=$_GET['pid'];
+            }
+            if(isset($_GET['sid']))
+            {
+              $sid=$_GET['sid'];
+            }
+            if(isset($_GET['bid']))
+            {
+              $bid=$_GET['bid'];
+            }
+            ?>
+
+            <section class="services-area pb-120" style="margin-top: 90px">
+        <div class="container">
+          
+          <?php
+            if(isset($_GET['id']))
+            {
+                $id=$_GET['id'];
+              if($id==1)
+              {
+                echo '<div class="alert alert-success" role="alert" > 
+                  <center>Information Saved Successfully.</center></div>';
+              }
+            }
+          ?>
+             <center><div>
+            <div class="jumbotron text-xs-center">
+
+            <!-- Page Content -->
+                    <div id="wrapper">
+                    <div id="page-wrapper">
+                    <div class="fluid-container">
+                       <div class="col-lg-12">
+                            <h1 class="display-3">Thank You!</h1>
+                        </div>
+                  
+             
+              <p class="lead"><strong>Congratulations !! Your information is saved successfully.</strong> You will receive a confirmation mail and will get notification for the further process.</p>
+              <hr>
+              <p></div>
+                You are going online soon
+              </p>
+              <p class="lead">
+                <a rel="nofollow" rel="noreferrer"class="btn btn-primary btn-sm" href="create_new.php" role="button">Continue to homepage</a>
+              </p></div></center>
+
+            </div>
+
+
+                     
+
+
+
+			
+			
+			</div>
+        </div>
+		</div>
+</html>

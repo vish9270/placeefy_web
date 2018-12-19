@@ -1,0 +1,18 @@
+<?php
+include 'GlobalUtility.php';
+	//Start session
+	session_start();
+
+	//Check whether the session variable SESS_MEMBER_ID is present or not
+	if(!isset($_SESSION['username1']) || (trim($_SESSION['username1']) == ''))
+	{
+		header('location:e_login.php');
+		exit();
+	}
+	$username=$_SESSION['username1'];
+	
+	$pcon=connectToDB($INFO_GATH_DB);
+	$query = mysqli_fetch_array(mysqli_query($pcon,"SELECT * FROM employee where `e_username`='$username'"));
+		$eid=$query['eid'];
+		
+?>

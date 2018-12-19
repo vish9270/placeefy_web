@@ -1,0 +1,17 @@
+<?php 
+include 'p_dbconnection.php';
+
+$email = mysqli_real_escape_string($pcon, $_GET['email']);
+$query = mysqli_query($pcon,"select * from employee where e_username = '$email'");
+			if(mysqli_num_rows($query)>0)
+			{
+				$to = $email; 
+				$subject = 'Password Recovery| Placeefy'; 
+				$message = 'Please click on the below link to change your password. 
+				"http://www.placeefy.com/password_recovery.php?email='.$email.'"';
+									 
+				$headers = 'From:Support@placeefy.com'."\r\n";
+				mail($to, $subject, $message, $headers);
+
+
+			}

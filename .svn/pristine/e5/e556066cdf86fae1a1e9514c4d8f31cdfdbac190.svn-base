@@ -1,0 +1,46 @@
+<?php
+
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+// Escape user inputs for security
+
+$eid = mysqli_real_escape_string($pcon, $_POST['eid_pass']);
+$pid= mysqli_real_escape_string($pcon, $_POST['pid_pass']);
+$sid= mysqli_real_escape_string($pcon, $_POST['sid_pass']);
+
+	$service_row=mysqli_fetch_array(mysqli_query($pcon,"SELECT service FROM service_detail WHERE s_id=$sid"));
+	$service=$service_row['service'];
+	$amenities_count_row = mysqli_fetch_array(mysqli_query($pcon,"SELECT count(amenity_id) FROM master_amenities WHERE amenity_type IN ('$service','both')"));
+	$amenity_count=$amenities_count_row[0];
+		
+	$amenities='';
+	
+	for($i=1;$i<=$amenity_count;$i++){
+		if(isset($_POST['amenity'.$i])){
+			$amenity_id=$_POST['amenity'.$i];
+			$amenities .= $amenity_id.';';
+		}							
+	}
+	
+	
+ $sql="UPDATE service_detail SET 
+ 	amenities='$amenities'
+ 	WHERE s_id=$sid";
+
+
+ 	if(mysqli_query($pcon, $sql)){
+ 		header("Location:user.php?id=1&eid=$eid&pid=$pid&sid=$sid");
+ 	} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+	}
+		
+
+// // close connection
+
+mysqli_close($pcon);
+?>

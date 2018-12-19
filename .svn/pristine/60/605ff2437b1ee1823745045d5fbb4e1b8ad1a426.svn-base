@@ -1,0 +1,336 @@
+<?php include 'header.php';?>
+<body id="body">
+<?php include 'navbar.php';?>
+
+<section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Service</h1>
+          <p>Services which are extremely important for an outsider are now under a single roof, <br>Just
+find it and "Get Comfortable" in the new city.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="service-about section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+
+				<h2>Please fill this form to avail our services:</h2>
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4mTNkkaCL1slmXdohj4xnkBeJHAO3C9xwzquIUdgAbM6JgQ/viewform?embedded=true" width="100%" height="400" frameborder="1" marginheight="0" marginwidth="0">Hold on a second...</iframe>
+			</div>
+			<div class="col-md-6">
+				<img class="img-responsive" src="images/company/outsider-img2.png">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="service-arrow">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 bg-primary">
+				<div class="block">
+					<i class="fas fa-rupee-sign"></i>
+					<h3>Affordable Price Rates</h3>
+					<p>We know that outsiders needs money in their work and hence offering them our affordable services to save money for big things.</p>
+				</div>
+			</div>
+			<div class="col-md-4 bg-primary bg-primary-dark">
+				<div class="block">
+					<i class="fas fa-check"></i>
+					<h3>Quality Assurance</h3>
+					<p>Quality is the major issue for the outsiders. Hence keeping this in mind we have a proper quality check and quality control team in hand.</p>
+				</div>
+			</div>
+			<div class="col-md-4 bg-primary bg-primary-darker">
+				<div class="block">
+					<i class="fas fa-hand-holding-usd"></i>
+					<h3>Discounts, Offers & Perks</h3>
+					<p>Who doesn't love discounts? We will always keep you in mood by bringing lots of offers, perks, discounts and other benefits in your service.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- <section class="service-list section bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-title text-center">
+					<h2>Where we are?</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="block">
+					<h4>User research</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Product marketing</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Visual design</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Front-end engineering</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Usability testing & analytics</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="block">
+					<h4>Design sprints & prototyping</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, unde.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+
+<section class="portfolio-work">
+  <div class="container">
+  	<div class="row">
+			<div class="col-md-12">
+				<div class="section-title text-center">
+					<h2>Where we are?</h2>
+				</div>
+			</div>
+		</div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <div class="portfolio-menu">
+            <ul>
+              <li class="filter" data-filter="all">Nagpur</li>
+              <li class="filter" data-filter=".Nandanvan">Nandanvan</li>
+              <li class="filter" data-filter=".Hingna">Hingna Road</li>
+              <li class="filter" data-filter=".Chatrapati">Chatrapati Square</li>
+              <li class="filter" data-filter=".Sitabardi">Sitabardi</li>
+              <li class="filter" data-filter=".Mahal">Mahal</li>
+              <li class="filter" data-filter=".Dharampeth">Dharampeth</li>
+              <li class="filter" data-filter=".Gitti">Gitti Khadan</li>
+              <li class="filter" data-filter=".Sadar">Sadar</li>
+              <li class="filter" data-filter=".Manewada">Manewada</li>
+              <li class="filter" data-filter=".Sakardara">Sakardara</li>
+              <li class="filter" data-filter=".Manish">Manish Nagar</li>
+              <li class="filter" data-filter=".Wanadongri">Wanadongri</li>
+              <li class="filter" data-filter=".IT">IT Park</li>
+              <li class="filter" data-filter=".Mihan">Mihan</li>
+
+            </ul>
+          </div>
+          <div class="portfolio-contant">
+            <ul class="portfolio-contant-active text-center portfolio-popup">
+              <li class="mix Nandanvan">
+                <a class="portfolio-popup" href="images/portfolio/work1.jpg">
+                  <img src="images/portfolio/work1.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Rio Furniture</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Hingna">
+                <a  href="images/portfolio/work2.jpg">
+                  <img src="images/portfolio/work2.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Behance Design</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Chatrapati">
+                <a href="images/portfolio/work3.jpg">
+                  <img src="images/portfolio/work3.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Brothers Furniture</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Sitabardi">
+                <a href="images/portfolio/work4.jpg">
+                  <img src="images/portfolio/work4.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Adestra Cookup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Mahal">
+                <a href="images/portfolio/work5.jpg">
+                  <img src="images/portfolio/work5.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Texas Boxing</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                      
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Dharampeth">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix Gitti">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Sadar">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+                <li class="mix Manewada">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="mix Sakardara">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix Manish">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix Wanadongri">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix IT">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+               <li class="mix Mihan">
+                <a href="images/portfolio/work6.jpg">
+                  <img src="images/portfolio/work6.jpg" alt="">
+                  <div class="item-overly">
+                    <div class="position-center">
+                      <h4>Apple Mockup</h4>
+                      <p>Labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="call-to-action bg-1 section-sm overly">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h2>Earning Opportunity For the Outsider</h2>
+					<p>If you find any room, mess or tiffin service provider near you. Refer it to Placeefy and get paid for every <br> Verified Listing you made.</p>
+					<a class="btn btn-main btn-solid-border" href="#" >Know More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php 
+    include 'navbar-bottom.php';?>
+    include 'footer.php';?>
+    
+
+
+
+  </body>
+  </html>

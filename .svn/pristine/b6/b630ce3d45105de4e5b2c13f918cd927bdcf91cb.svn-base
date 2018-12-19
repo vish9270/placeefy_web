@@ -1,0 +1,178 @@
+<?php
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		}
+        if(isset($_POST['bid_pass']))
+        {
+            $bid=$_POST['bid_pass'];
+        }
+
+    $filebasename1= basename($_FILES['upload1']['name']);
+    $filenametodb1="";
+    $ext = strtolower(substr($filebasename1, strpos($filebasename1, '.')+1));
+    //echo $ext;
+    if(($ext =='png')||($ext=='gif')||($ext=='bmp')||($ext=='jpg')||($ext=='jpeg'))
+    {
+        echo 'extension_check1';
+        $desired_dir = 'uploads/';
+        $filename1 ='1-'.$eid.'_'.$pid.'_'.$sid.'_'.$bid.'-'.$filebasename1;
+        if(file_exists($desired_dir.$filename1))
+        {
+            header("Location:photo_section.php?msg=11&sid=$sid&pid=$pid&bid=$bid");
+        }
+        else
+        {
+            echo "file1 is uploading<br>";
+            move_uploaded_file($_FILES['upload1']['tmp_name'], $desired_dir.$filename1);
+            $filenametodb1 = $desired_dir.$filename1;
+        }
+    }
+    else
+    {
+      header("Location:photo_section.php?msg=12&sid=$sid&pid=$pid&bid=$bid");
+    }
+
+
+    $filebasename2= basename($_FILES['upload2']['name']);
+    $filenametodb2="";
+    $ext = strtolower(substr($filebasename2, strpos($filebasename2, '.')+1));
+    if(
+	($ext =='png')||
+	($ext=='gif')||
+	($ext=='bmp')||
+	($ext=='jpg')||
+	($ext=='jpeg')&&
+	(
+	($_FILES['upload']['type'] =='application/png')||
+	($_FILES['upload']['type'] =='application/gif') || 
+	($_FILES['upload']['type'] =='application/bmp')||
+	($_FILES['upload']['type'] =='application/jpg')||
+	($_FILES['upload']['type'] =='application/jpeg')))
+    {
+        echo 'extension_check2';
+        $desired_dir = 'uploads/';
+        $filename2 ='2-'.$eid.'_'.$pid.'_'.$sid.'_'.$bid.'-'.$filebasename2;
+        if(file_exists($desired_dir.$filename2))
+        {
+           header("Location:photo_section.php?msg=21&sid=$sid&pid=$pid&bid=$bid");
+        }
+        else
+        {
+            echo "file is uploading2";
+            move_uploaded_file($_FILES['upload2']['tmp_name'], $desired_dir.$filename2);
+            $filenametodb2 = $desired_dir.$filename2;
+        }
+    }
+    else
+    {
+      header("Location:photo_section.php?msg=22&sid=$sid&pid=$pid&bid=$bid");
+    }
+
+
+    $filebasename3= basename($_FILES['upload3']['name']);
+    $filenametodb3="";
+    $ext = strtolower(substr($filebasename3, strpos($filebasename3, '.')+1));
+    //echo $ext;
+    if(($ext =='png')||($ext=='gif')||($ext=='bmp')||($ext=='jpg')||($ext=='jpeg'))
+    {
+        echo 'hi';
+        $desired_dir = 'uploads/';
+        $filename3 ='3-'.$eid.'_'.$pid.'_'.$sid.'_'.$bid.'-'.$filebasename3;
+        if(file_exists($desired_dir.$filename3))
+        {
+        header("Location:photo_section.php?msg=31&sid=$sid&pid=$pid&bid=$bid");
+        }
+        else
+        {
+            echo "hello";
+            move_uploaded_file($_FILES['upload3']['tmp_name'], $desired_dir.$filename3);
+            $filenametodb3 = $desired_dir.$filename3;
+        }
+    }
+    else
+    {
+      header("Location:photo_section.php?msg=32&sid=$sid&pid=$pid&bid=$bid");
+    }
+
+    $filebasename4= basename($_FILES['upload4']['name']);
+    $filenametodb4="";
+    $ext = strtolower(substr($filebasename4, strpos($filebasename4, '.')+1));
+    //echo $ext;
+    if(($ext =='png')||($ext=='gif')||($ext=='bmp')||($ext=='jpg')||($ext=='jpeg'))
+    {
+        echo 'hi';
+        $desired_dir = 'uploads/';
+        $filename4 ='4-'.$eid.'_'.$pid.'_'.$sid.'_'.$bid.'-'.$filebasename4;
+        if(file_exists($desired_dir.$filename4))
+        {
+           header("Location:photo_section.php?msg=41&sid=$sid&pid=$pid&bid=$bid");
+        }
+        else
+        {
+            echo "hello";
+            move_uploaded_file($_FILES['upload4']['tmp_name'], $desired_dir.$filename4);
+            $filenametodb4 = $desired_dir.$filename4;
+        }
+    }
+    else
+    {
+       header("Location:photo_section.php?msg=42&sid=$sid&pid=$pid&bid=$bid");
+    }
+
+    $filebasename5= basename($_FILES['upload5']['name']);
+    $filenametodb5="";
+    $ext = strtolower(substr($filebasename5, strpos($filebasename5, '.')+1));
+    //echo $ext;
+    if(($ext =='png')||($ext=='gif')||($ext=='bmp')||($ext=='jpg')||($ext=='jpeg'))
+    {
+        echo 'hi';
+        $desired_dir = 'uploads/';
+        $filename5 ='5-'.$eid.'_'.$pid.'_'.$sid.'_'.$bid.'-'.$filebasename5;
+        if(file_exists($desired_dir.$filename5))
+        {
+           header("Location:photo_section.php?msg=51&sid=$sid&pid=$pid&bid=$bid");
+        }
+        else
+        {
+            echo "hello";
+            move_uploaded_file($_FILES['upload5']['tmp_name'], $desired_dir.$filename5);
+            $filenametodb5 = $desired_dir.$filename5;
+        }
+    }
+    else
+    {
+        header("Location:photo_section.php?msg=52&sid=$sid&pid=$pid&bid=$bid");
+    }
+
+// attempt insert query execution
+$sql="UPDATE business_details SET 
+photo1='$filenametodb1',
+photo2='$filenametodb2',
+photo3='$filenametodb3',
+photo4='$filenametodb4',
+photo5='$filenametodb5'
+WHERE bid=$bid";
+if(mysqli_query($pcon, $sql)){
+   // echo "Query Executed Successfully";
+    $bid=mysqli_insert_id($pcon);
+        header("Location:acceptance.php?id=1&eid=$eid&sid=$sid&pid=$pid&bid=$bid");
+                   } 
+    else{
+   echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+        }
+// close connection
+mysqli_close($pcon);
+?>

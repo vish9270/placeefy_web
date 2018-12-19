@@ -1,0 +1,53 @@
+<?php
+include 'GlobalUtility.php';
+if ( is_session_started() === FALSE ) echo'session failed';
+ob_start();
+session_start();
+if ( is_session_started() === FALSE ) echo'session failed';
+else
+echo'session started';
+// include 'p_dbconnection.php';
+$pcon=connectToDB($INFO_GATH_DB);
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+//starting the session for user profile page
+if(!empty($_POST['e_username']))   //checking the 'user' name which is from index.php, is it empty or have some text
+{
+	$query = mysqli_query($pcon,"SELECT * FROM `employee` WHERE e_username= '$_POST[e_username]' AND e_password = '$_POST[e_password]'") or die(mysqli_error());
+	$e_username=$_POST['e_username'];
+
+	$row = mysqli_fetch_array($query) ;
+	if(!empty($row['e_username']) AND !empty($row['e_password']))
+	{
+	if ( is_session_started() === FALSE ) session_start();
+
+	session_regenerate_id();
+	$_SESSION['user1'] = $row['e_password'];
+	$_SESSION['username1']= $row['e_username'];
+	$_SESSION['user'] = $userData['e_username'];
+	$_SESSION['e_password'] = $userData['e_password'];
+	session_write_close();	
+	header('Location:employee_home.php');
+
+	}
+	else
+	{
+			header('Location:login_employee.php?id=1');
+	}
+}
+else{
+	header('Location:login_employee.php');
+	//echo "hi";
+}
+function check_logged(){
+     global $_SESSION,$username;
+     if (!array_key_exists($_SESSION["logged"],$username)) {
+          header('Location: #');
+     };
+};
+
+
+?>

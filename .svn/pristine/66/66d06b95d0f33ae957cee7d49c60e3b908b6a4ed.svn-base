@@ -1,0 +1,325 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 02, 2018 at 07:17 PM
+-- Server version: 5.6.26
+-- PHP Version: 5.5.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `placeefy`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accommodation`
+--
+
+CREATE TABLE IF NOT EXISTS `accommodation` (
+  `aid` int(11) NOT NULL,
+  `no_of_room` int(99) NOT NULL,
+  `vacancy` int(99) NOT NULL,
+  `washroom` int(1) NOT NULL,
+  `size_of_room` int(30) NOT NULL,
+  `ac` int(1) NOT NULL,
+  `attached_bathroom` int(1) NOT NULL,
+  `cupboard` int(1) NOT NULL,
+  `geyser` int(1) NOT NULL,
+  `shelves` int(1) NOT NULL,
+  `bedding` int(1) NOT NULL,
+  `table` int(1) NOT NULL,
+  `bedsheet` int(1) NOT NULL,
+  `house_keeping` int(1) NOT NULL,
+  `elevator` int(1) NOT NULL,
+  `induction` int(1) NOT NULL,
+  `gas` int(1) NOT NULL,
+  `wifi` int(1) NOT NULL,
+  `washing_machine` int(1) NOT NULL,
+  `refrigerator` int(1) NOT NULL,
+  `oven` int(1) NOT NULL,
+  `gym` int(1) NOT NULL,
+  `playground` int(1) NOT NULL,
+  `indoor_games` int(1) NOT NULL,
+  `terrace_garden` int(1) NOT NULL,
+  `library` int(1) NOT NULL,
+  `entertainment_lounge` int(1) NOT NULL,
+  `rooms_of_guardians` int(1) NOT NULL,
+  `security_guard` int(1) NOT NULL,
+  `bio_door_access` int(1) NOT NULL,
+  `door_lens` int(1) NOT NULL,
+  `chain_gate` int(1) NOT NULL,
+  `travel_concierge` int(1) NOT NULL,
+  `dr_on_call` int(1) NOT NULL,
+  `social_activities` int(1) NOT NULL,
+  `last_entry_time` time NOT NULL,
+  `other_rules` varchar(99) NOT NULL,
+  `metro_station` float NOT NULL,
+  `atm` float NOT NULL,
+  `bus_stand` float NOT NULL,
+  `railway_station` float NOT NULL,
+  `hospital` float NOT NULL,
+  `chemist` float NOT NULL,
+  `restaurent` float NOT NULL,
+  `temple` float NOT NULL,
+  `clg1` varchar(25) NOT NULL,
+  `clg_dist1` float NOT NULL,
+  `clg2` varchar(25) NOT NULL,
+  `clg_dist2` float NOT NULL,
+  `clg3` varchar(25) NOT NULL,
+  `clg_dist3` float NOT NULL,
+  `facility_attached` int(1) NOT NULL,
+  `rent_included` int(1) NOT NULL,
+  `brief_of_rates` varchar(99) NOT NULL,
+  `rent_per_month` int(5) NOT NULL,
+  `rent_per_yr` int(5) NOT NULL,
+  `advance` int(1) NOT NULL,
+  `installment` int(1) NOT NULL,
+  `ac_room_security_deposit` int(5) NOT NULL,
+  `other_info` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `food_services`
+--
+
+CREATE TABLE IF NOT EXISTS `food_services` (
+  `fid` int(11) NOT NULL,
+  `service_type` int(1) NOT NULL,
+  `diameter` int(2) NOT NULL,
+  `food_type` int(1) NOT NULL,
+  `seating_type` int(1) NOT NULL,
+  `music_system` int(1) NOT NULL,
+  `study_table` int(1) NOT NULL,
+  `other_services` varchar(99) NOT NULL,
+  `food_cuisine` varchar(500) NOT NULL,
+  `other_cuisine` varchar(50) NOT NULL,
+  `morning_time` time NOT NULL,
+  `evening_time` int(11) NOT NULL,
+  `days_off` varchar(99) NOT NULL,
+  `dahi` int(1) NOT NULL,
+  `papad` int(1) NOT NULL,
+  `salad` int(1) NOT NULL,
+  `pickle` int(1) NOT NULL,
+  `two_sabji` int(1) NOT NULL,
+  `additional_services` varchar(99) NOT NULL,
+  `outside_eaters` int(1) NOT NULL,
+  `other_rules` varchar(99) NOT NULL,
+  `rates` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `food_services`
+--
+
+INSERT INTO `food_services` (`fid`, `service_type`, `diameter`, `food_type`, `seating_type`, `music_system`, `study_table`, `other_services`, `food_cuisine`, `other_cuisine`, `morning_time`, `evening_time`, `days_off`, `dahi`, `papad`, `salad`, `pickle`, `two_sabji`, `additional_services`, `outside_eaters`, `other_rules`, `rates`) VALUES
+(1, 0, 0, 0, 0, 0, 0, '', '', '', '00:00:00', 0, '', 0, 0, 0, 0, 0, '', 0, '', ''),
+(2, 0, 0, 0, 0, 0, 0, '', '', '', '00:00:00', 0, '', 0, 0, 0, 0, 0, '', 0, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service`
+--
+
+CREATE TABLE IF NOT EXISTS `service` (
+  `sid` int(11) NOT NULL,
+  `f_name` varchar(20) NOT NULL,
+  `m_name` varchar(20) NOT NULL,
+  `l_name` varchar(20) NOT NULL,
+  `company_name` varchar(20) NOT NULL,
+  `plot_num` varchar(5) NOT NULL,
+  `area_nagar` varchar(20) NOT NULL,
+  `landmark` varchar(20) NOT NULL,
+  `road` varchar(20) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `pincode` int(4) NOT NULL,
+  `website` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `account_num` int(20) NOT NULL,
+  `latitude` float NOT NULL,
+  `longitude` float NOT NULL,
+  `gender` int(1) NOT NULL,
+  `cooler` int(1) NOT NULL,
+  `dinning` int(1) NOT NULL,
+  `tv` int(1) NOT NULL,
+  `newpaper` int(1) NOT NULL,
+  `magazine` int(1) NOT NULL,
+  `breakfast` int(1) NOT NULL,
+  `dinner` int(1) NOT NULL,
+  `late_night_meal` int(1) NOT NULL,
+  `lunch` int(1) NOT NULL,
+  `tea_coffee` int(1) NOT NULL,
+  `evening_snacks` int(1) NOT NULL,
+  `cctv` int(1) NOT NULL,
+  `smoking` int(1) NOT NULL,
+  `water_cooler` int(1) NOT NULL,
+  `water_purifier` int(1) NOT NULL,
+  `wash_basin` int(1) NOT NULL,
+  `created_by` varchar(20) NOT NULL,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_by` varchar(50) NOT NULL,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `suggestion`
+--
+
+CREATE TABLE IF NOT EXISTS `suggestion` (
+  `suggestion` longtext NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created_by` varchar(20) NOT NULL,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_by` varchar(20) NOT NULL,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaction_log`
+--
+
+CREATE TABLE IF NOT EXISTS `transaction_log` (
+  `transaction_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `uid` int(11) NOT NULL,
+  `f_name` varchar(20) NOT NULL,
+  `m_name` varchar(20) NOT NULL,
+  `l_name` varchar(20) NOT NULL,
+  `plot_num` int(5) NOT NULL,
+  `area_nagar` varchar(10) NOT NULL,
+  `landmark` varchar(10) NOT NULL,
+  `road` varchar(10) NOT NULL,
+  `city` varchar(10) NOT NULL,
+  `pincode` int(6) NOT NULL,
+  `contact1` int(10) NOT NULL,
+  `contact2` int(10) NOT NULL,
+  `email1` varchar(30) NOT NULL,
+  `email2` varchar(30) NOT NULL,
+  `user_type` varchar(20) NOT NULL,
+  `dob` datetime NOT NULL,
+  `working_area` varchar(20) NOT NULL,
+  `college_name` int(20) NOT NULL,
+  `branch` varchar(20) NOT NULL,
+  `year` int(1) NOT NULL,
+  `food_type` int(1) NOT NULL,
+  `acco_type` varchar(1) NOT NULL,
+  `login_id` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `ip` int(11) NOT NULL,
+  `about` varchar(200) NOT NULL,
+  `created_by` varchar(20) NOT NULL,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_by` varchar(20) NOT NULL,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_booking`
+--
+
+CREATE TABLE IF NOT EXISTS `user_booking` (
+  `user_id` int(11) NOT NULL,
+  `service_id` int(11) NOT NULL,
+  `created_by` varchar(50) NOT NULL,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_by` varchar(50) NOT NULL,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `account_num` int(20) NOT NULL,
+  `transaction_id` int(11) NOT NULL,
+  `payment_mode` int(11) NOT NULL,
+  `price` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `accommodation`
+--
+ALTER TABLE `accommodation`
+  ADD PRIMARY KEY (`aid`);
+
+--
+-- Indexes for table `food_services`
+--
+ALTER TABLE `food_services`
+  ADD PRIMARY KEY (`fid`);
+
+--
+-- Indexes for table `service`
+--
+ALTER TABLE `service`
+  ADD PRIMARY KEY (`sid`);
+
+--
+-- Indexes for table `transaction_log`
+--
+ALTER TABLE `transaction_log`
+  ADD PRIMARY KEY (`transaction_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`uid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `accommodation`
+--
+ALTER TABLE `accommodation`
+  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `food_services`
+--
+ALTER TABLE `food_services`
+  MODIFY `fid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `service`
+--
+ALTER TABLE `service`
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `transaction_log`
+--
+ALTER TABLE `transaction_log`
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

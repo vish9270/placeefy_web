@@ -1,0 +1,60 @@
+<?php
+
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+// Escape user inputs for security
+if (isset($_POST['bedroom'])){
+			$num_bedroom = $_POST['bedroom'];
+	}
+	if (isset($_POST['hall'])){
+			$num_hall = $_POST['hall'];
+	}
+	if (isset($_POST['kitchen'])){
+			$num_kitchen = $_POST['kitchen'];
+	}
+	if (isset($_POST['beds'])){
+			$num_beds = $_POST['beds'];
+	}
+	
+	if (isset($_POST['customer_accommodate'])){
+			$num_customer_accommodate = $_POST['customer_accommodate'];
+	}
+	if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+			
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		
+		}
+
+$sql="UPDATE service_detail SET 
+	num_bedroom='$num_bedroom',
+	num_hall='$num_hall', 
+	num_kitchen='$num_kitchen', 
+	num_beds='$num_beds', 
+	num_customer_accommodate='$num_customer_accommodate'
+	WHERE s_id=$sid";
+	
+if(mysqli_query($pcon, $sql))
+{
+	header("Location:sleeping_arrangement.php?id=1&eid=$eid&pid=$pid&sid=$sid");
+} 
+else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+	}
+	
+// close connection
+mysqli_close($pcon);
+?>

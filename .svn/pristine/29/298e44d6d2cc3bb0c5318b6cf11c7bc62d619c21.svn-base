@@ -1,0 +1,74 @@
+<?php
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+// Escape user inputs for security
+if (isset($_POST['serve_range'])){
+			$serve_range = $_POST['serve_range'];
+	}
+	
+
+if (isset($_POST['food_preference'])){
+			$food_preference = $_POST['food_preference'];
+	}
+	else $food_preference=0;
+
+if (isset($_POST['morning'])){
+			$morning = $_POST['morning'];
+	}
+	else $afternoon=0;
+	if (isset($_POST['afternoon'])){
+			$afternoon = $_POST['afternoon'];
+	}
+	else $afternoon=0;
+	if (isset($_POST['evening'])){
+			$evening = $_POST['evening'];
+	}
+	else $evening=0;
+	if (isset($_POST['night'])){
+			$night = $_POST['night'];
+	}
+	else $night =0;
+//w_id=work id
+
+
+	if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		}
+
+
+
+// attempt insert query execution
+
+$sql="UPDATE service_detail SET 
+	serve_range='$serve_range',
+	food_preference='$food_preference',
+	morning='$morning',
+	afternoon='$afternoon',
+	evening='$evening',
+	night='$night'
+	WHERE s_id=$sid";
+	if(mysqli_query($pcon, $sql))
+		{
+				
+			header("Location:service_location_seating_facility.php?id=1&eid=$eid&sid=$sid&pid=$pid");
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+
+// close connection
+
+mysqli_close($pcon);
+?>

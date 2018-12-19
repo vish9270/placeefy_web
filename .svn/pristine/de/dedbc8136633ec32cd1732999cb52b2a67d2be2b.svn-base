@@ -1,0 +1,3 @@
+<?php
+$pcon=mysqli_connect("localhost","root","","placeefy_info_gath") or die("Failed to connect to MySQL: " . mysqli_error());
+?>

@@ -1,0 +1,46 @@
+<?php
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+// Escape user inputs for security
+if (isset($_POST['title'])){
+			$title = $_POST['title'];
+	}
+	if (isset($_POST['description'])){
+			$description = $_POST['description'];
+	}
+	if (isset($_POST['welcome_note'])){
+			$welcome_note = $_POST['welcome_note'];
+	}
+	if(isset($_POST['eid_pass']))
+		{
+			$eid=$_POST['eid_pass'];
+		}
+	if(isset($_POST['pid_pass']))
+		{
+			$pid=$_POST['pid_pass'];
+		}
+	if(isset($_POST['sid_pass']))
+		{
+			$sid=$_POST['sid_pass'];
+		}
+
+
+// attempt insert query execution
+
+$sql = "INSERT INTO business_details (pid, eid, sid, title, title_description, welcome_note) VALUES ('$pid', '$eid','$sid', '$title', '$title_description', '$welcome_note')";
+	if(mysqli_query($pcon, $sql))
+		{
+			 $bid=mysqli_insert_id($pcon);	
+			header("Location:customer_requirement.php?id=1&eid=$eid&sid=$sid&pid=$pid&bid=$bid");
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+
+// close connection
+
+mysqli_close($pcon);
+?>

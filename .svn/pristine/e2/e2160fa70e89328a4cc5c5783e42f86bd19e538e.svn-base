@@ -1,0 +1,178 @@
+<?php include 'header.php';?>
+<body id="body">
+<?php include 'navbar.php';?>
+
+
+			<section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Our Initiative</h1>
+          <p>List your service on placeefy and we will show it to the world just for you.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pb-20"> 
+        <ul class="form-inline"> 
+            <div class="col-lg-4 col-md-6"> 
+                <li>
+                    <h3 style="color: white;">Get Verified Customers</h3>
+                </li>                             
+            </div>                         
+            <div class="col-lg-4 col-md-6"> 
+                <li>
+                    <h3 style="color: white;">Grow your Business</h3>
+                </li>                             
+            </div>                         
+            <div class="col-lg-4 col-md-6"> 
+                <li>
+                    <h3 style="color: white;">Generate More Revenue</h3>
+                </li>                             
+            </div>                         
+        </ul>                     
+    </div>  
+  </div>
+</section>
+<!-- Start benifits Area -->         
+        <section class="service-list section bg-gray">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-title text-center">
+					<h2>Why we list our service?</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="block">
+					<h4>Why Placeefy?</h4>
+					<p>Placeefy is the best place to grow your business and generate more revenue by renting a room or create delicious food..</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="block">
+					<h4>Free Listing</h4>
+					<p>Yes!! Listing your business on placeefy is completely free of cost. </p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="block">
+					<h4>Reports and Insights</h4>
+					<p>You will get the monthly, yearly or weekly reports of your business and can track your growth with placeefy</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="block">
+					<h4>Guided Business</h4>
+					<p>We'll support you and your business in every step, whether you need a service man or need some guidance. </p>
+				</div>
+			</div>
+			</div>
+			</div>
+			</section>         
+        <!-- End benifits Area -->   
+
+       <section class="call-to-action bg-1 section-sm overly">
+		<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h2>Start Listing your Service With Placeefy </h2>
+					<a class="btn btn-main btn-solid-border" href="#" >Get Started</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="faq section-sm ">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="text-center">Here is some FAQ , for more please visit our <a href="contact.html">Contact Page</a></h2>
+			</div>
+		</div>
+		<div class="row mt-30">
+			<div class="col-md-6">
+				<h4>Do I need to pay for upfront?</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sed dolor laboriosam laborum expedita quisquam, perferendis esse illo inventore voluptatibus.</p>
+			</div>
+			<div class="col-md-6">
+				<h4>Are volume discounts available?</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sed dolor laboriosam laborum expedita quisquam, perferendis esse illo inventore voluptatibus.</p>
+			</div>
+			<div class="col-md-6">
+				<h4>What level of support is included in my plan?</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sed dolor laboriosam laborum expedita quisquam, perferendis esse illo inventore voluptatibus.</p>
+			</div>
+			<div class="col-md-6">
+				<h4>Do I need to pay more for chat?</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sed dolor laboriosam laborum expedita quisquam, perferendis esse illo inventore voluptatibus.</p>
+			</div>
+			<div class="col-md-6">
+				<h4>What does basic SEO Pack means ?</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sed dolor laboriosam laborum expedita quisquam, perferendis esse illo inventore voluptatibus.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="service">
+  <div class="container">
+    <div class="row ">
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="far fa-clock"></i>
+          <h4>24x7 Customer Support</h4>
+          <p>Our Enthusiatic team is always ready to help you out.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+           <i class="fas fa-bullhorn"></i>
+          <h4>Privacy Gauranteed</h4>
+          <p>Your Privacy is utmost important to us. And You can any time trust on us.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="fas fa-sliders-h"></i>
+          <h4>My Service My Rules</h4>
+          <p>You are our super hero, you can set your own rules and regulations to maintain discpline.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="service-item">
+          <i class="fas fa-gift"></i>
+          <h4>Offerings</h4>
+          <p>Placeefy has a lot more to offer than your expectations.</p>
+        </div>
+      </div>
+     </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<?php 
+    include 'navbar-bottom.php';?>
+    include 'footer.php';?>
+    
+
+
+
+  </body>
+  </html>

@@ -1,0 +1,638 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 20, 2018 at 07:36 PM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `placeefy_info_gath`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accommodation`
+--
+
+CREATE TABLE `accommodation` (
+  `aid` int(11) NOT NULL,
+  `no_of_room` int(99) NOT NULL,
+  `vacancy` int(99) NOT NULL,
+  `washroom` int(1) NOT NULL,
+  `size_of_room` int(30) NOT NULL,
+  `ac` int(1) NOT NULL,
+  `attached_bathroom` int(1) NOT NULL,
+  `cupboard` int(1) NOT NULL,
+  `geyser` int(1) NOT NULL,
+  `shelves` int(1) NOT NULL,
+  `bedding` int(1) NOT NULL,
+  `table` int(1) NOT NULL,
+  `bedsheet` int(1) NOT NULL,
+  `house_keeping` int(1) NOT NULL,
+  `elevator` int(1) NOT NULL,
+  `induction` int(1) NOT NULL,
+  `gas` int(1) NOT NULL,
+  `wifi` int(1) NOT NULL,
+  `washing_machine` int(1) NOT NULL,
+  `refrigerator` int(1) NOT NULL,
+  `oven` int(1) NOT NULL,
+  `gym` int(1) NOT NULL,
+  `playground` int(1) NOT NULL,
+  `indoor_games` int(1) NOT NULL,
+  `terrace_garden` int(1) NOT NULL,
+  `library` int(1) NOT NULL,
+  `entertainment_lounge` int(1) NOT NULL,
+  `rooms_of_guardians` int(1) NOT NULL,
+  `security_guard` int(1) NOT NULL,
+  `bio_door_access` int(1) NOT NULL,
+  `door_lens` int(1) NOT NULL,
+  `chain_gate` int(1) NOT NULL,
+  `travel_concierge` int(1) NOT NULL,
+  `dr_on_call` int(1) NOT NULL,
+  `social_activities` int(1) NOT NULL,
+  `last_entry_time` time NOT NULL,
+  `other_rules` varchar(99) NOT NULL,
+  `metro_station` float NOT NULL,
+  `atm` float NOT NULL,
+  `bus_stand` float NOT NULL,
+  `railway_station` float NOT NULL,
+  `hospital` float NOT NULL,
+  `chemist` float NOT NULL,
+  `restaurent` float NOT NULL,
+  `temple` float NOT NULL,
+  `clg1` varchar(25) NOT NULL,
+  `clg_dist1` float NOT NULL,
+  `clg2` varchar(25) NOT NULL,
+  `clg_dist2` float NOT NULL,
+  `clg3` varchar(25) NOT NULL,
+  `clg_dist3` float NOT NULL,
+  `facility_attached` int(1) NOT NULL,
+  `rent_included` int(1) NOT NULL,
+  `brief_of_rates` varchar(99) NOT NULL,
+  `rent_per_month` int(5) NOT NULL,
+  `rent_per_yr` int(5) NOT NULL,
+  `advance` int(1) NOT NULL,
+  `installment` int(1) NOT NULL,
+  `ac_room_security_deposit` int(5) NOT NULL,
+  `other_info` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `business_details`
+--
+
+CREATE TABLE `business_details` (
+  `bid` int(11) NOT NULL,
+  `eid` int(11) NOT NULL,
+  `sid` int(11) NOT NULL,
+  `pid` int(11) NOT NULL,
+  `photo1` varchar(100) NOT NULL,
+  `photo2` varchar(100) NOT NULL,
+  `photo3` varchar(100) NOT NULL,
+  `photo4` varchar(100) NOT NULL,
+  `photo5` varchar(100) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `title_description` text NOT NULL,
+  `welcome_note` longtext NOT NULL,
+  `requirement` longtext NOT NULL,
+  `rule` longtext NOT NULL,
+  `vacancy` longtext NOT NULL,
+  `qa1` text NOT NULL,
+  `qa2` text NOT NULL,
+  `qa3` text NOT NULL,
+  `qa4` text NOT NULL,
+  `qa5` text NOT NULL,
+  `qa6` varchar(100) NOT NULL,
+  `qa7` varchar(100) NOT NULL,
+  `qa8` varchar(100) NOT NULL,
+  `min_price` int(6) NOT NULL,
+  `base_price` int(6) NOT NULL,
+  `max_price` int(6) NOT NULL,
+  `offer` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `business_details`
+--
+
+INSERT INTO `business_details` (`bid`, `eid`, `sid`, `pid`, `photo1`, `photo2`, `photo3`, `photo4`, `photo5`, `title`, `title_description`, `welcome_note`, `requirement`, `rule`, `vacancy`, `qa1`, `qa2`, `qa3`, `qa4`, `qa5`, `qa6`, `qa7`, `qa8`, `min_price`, `base_price`, `max_price`, `offer`) VALUES
+(1, 1, 1, 1, '1_1_1Techugo.png', '1_1_1Techugo.png', '1_1_1Techugo.png', '1_1_1Techugo.png', '1_1_1Techugo.png', 'Placeefy', 'sdhd', 'dxfhj', 'aadhar-0-college_id-company_id-zdfhfg', '0-0-1-1-0', '0-physical-calling', 'rented_before+old', 'customer_frequency+asap', 'notice_before_customer_arrives+1_day', 'customer_advance_booking+1_month', 'when_should_customer_contact+2_day', 'how_long_customer_stay+month', '', '', 3333, 325135, 6666, 10),
+(2, 1, 42, 22, '1_22_42', '1_22_42', '1_22_42', '1_22_42', '1_22_42', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(3, 1, 42, 22, '1_22_42', '1_22_42', '1_22_42', '1_22_42', '1_22_42', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(4, 1, 42, 22, '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(5, 1, 42, 22, '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(6, 1, 42, 22, '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(7, 1, 42, 22, '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(8, 1, 42, 22, '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '', '', '', '', '', '', 'rented_before+#', 'customer_frequency+#', 'notice_before_customer_arrives+same_day', 'customer_advance_booking+instant', 'when_should_customer_contact+same_day', 'how_long_customer_stay+#', 'customer_for_some_day+#', 'license_number+', 0, 0, 0, 0),
+(9, 1, 42, 22, '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(10, 1, 42, 22, '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '1_22_42Techugo.png', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(11, 0, 0, 0, '__', '__', '__', '__', '__', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(12, 1, 42, 22, '1_22_42', '1_22_42', '1_22_42', '1_22_42', '1_22_42', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(13, 1, 42, 22, '1_22_42', '1_22_42', '1_22_42', '1_22_42', '1_22_42', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0),
+(14, 1, 42, 22, '1_22_42', '1_22_42', '1_22_42', '1_22_42', '1_22_42', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee`
+--
+
+CREATE TABLE `employee` (
+  `eid` int(11) NOT NULL,
+  `e_fname` varchar(100) NOT NULL,
+  `e_lname` varchar(100) NOT NULL,
+  `e_username` varchar(100) NOT NULL,
+  `e_password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`eid`, `e_fname`, `e_lname`, `e_username`, `e_password`) VALUES
+(1, 'Vishveh', 'Ujawane', 'vishveshu143@gmail.com', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `food_services`
+--
+
+CREATE TABLE `food_services` (
+  `fid` int(11) NOT NULL,
+  `service_type` int(1) NOT NULL,
+  `diameter` int(2) NOT NULL,
+  `food_type` int(1) NOT NULL,
+  `seating_type` int(1) NOT NULL,
+  `music_system` int(1) NOT NULL,
+  `study_table` int(1) NOT NULL,
+  `other_services` varchar(99) NOT NULL,
+  `food_cuisine` varchar(500) NOT NULL,
+  `other_cuisine` varchar(50) NOT NULL,
+  `morning_time` time NOT NULL,
+  `evening_time` int(11) NOT NULL,
+  `days_off` varchar(99) NOT NULL,
+  `dahi` int(1) NOT NULL,
+  `papad` int(1) NOT NULL,
+  `salad` int(1) NOT NULL,
+  `pickle` int(1) NOT NULL,
+  `two_sabji` int(1) NOT NULL,
+  `additional_services` varchar(99) NOT NULL,
+  `outside_eaters` int(1) NOT NULL,
+  `other_rules` varchar(99) NOT NULL,
+  `rates` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `food_services`
+--
+
+INSERT INTO `food_services` (`fid`, `service_type`, `diameter`, `food_type`, `seating_type`, `music_system`, `study_table`, `other_services`, `food_cuisine`, `other_cuisine`, `morning_time`, `evening_time`, `days_off`, `dahi`, `papad`, `salad`, `pickle`, `two_sabji`, `additional_services`, `outside_eaters`, `other_rules`, `rates`) VALUES
+(1, 0, 0, 0, 0, 0, 0, '', '', '', '00:00:00', 0, '', 0, 0, 0, 0, 0, '', 0, '', ''),
+(2, 0, 0, 0, 0, 0, 0, '', '', '', '00:00:00', 0, '', 0, 0, 0, 0, 0, '', 0, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `master_amenities`
+--
+
+CREATE TABLE `master_amenities` (
+  `amenity_id` int(9) NOT NULL,
+  `amenity_grp` varchar(50) NOT NULL,
+  `amenity_type` varchar(50) NOT NULL,
+  `amenity` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `master_amenities`
+--
+
+INSERT INTO `master_amenities` (`amenity_id`, `amenity_grp`, `amenity_type`, `amenity`) VALUES
+(1, 'room_feature', 'both', 'wash_basin'),
+(2, 'room_feature', 'accommodation', 'cupboard'),
+(5, 'extra', 'accommodation', 'geyser'),
+(6, 'extra', 'accommodation', 'shelves'),
+(7, 'essential', 'accommodation', 'bedding'),
+(8, 'essential', 'accommodation', 'table'),
+(9, 'extra', 'accommodation', 'bedsheet'),
+(10, 'extra', 'both', 'cooler'),
+(11, 'extra', 'both', 'dinning_room'),
+(12, 'extra', 'accommodation', 'house_keeping'),
+(13, 'more_extra', 'both', 'power_backup'),
+(14, 'essential', 'both', 'water_purifier'),
+(15, 'extra', 'both', 'water_cooler'),
+(16, 'extra', 'both', 'tv'),
+(17, 'more_extra', 'accommodation', 'elevator'),
+(18, 'more_extra', 'accommodation', 'induction'),
+(19, 'extra', 'accommodation', 'gas'),
+(20, 'extra', 'both', 'newspaper'),
+(21, 'more_extra', 'both', 'magazine '),
+(22, 'more_extra', 'accommodation', 'wifi'),
+(23, 'essential', 'accommodation', 'mattress'),
+(24, 'essential', 'accommodation', 'pillow'),
+(25, 'security', 'accommodation', 'door_lens'),
+(26, 'more_extra', 'accommodation', 'washing_machine'),
+(27, 'extra', 'accommodation', 'refrigerator '),
+(28, 'more_extra', 'accommodation', 'oven'),
+(29, 'more_extra', 'accommodation', 'gym'),
+(30, 'more_extra', 'accommodation', 'playground '),
+(31, 'more_extra', 'accommodation', 'indoor_games'),
+(32, 'more_extra', 'accommodation', 'terrace_garden'),
+(33, 'more_extra', 'accommodation', 'library'),
+(34, 'more_extra', 'accommodation', 'entertainment_lounge'),
+(35, 'essential', 'both', 'free_parking'),
+(36, 'more_extra', 'accommodation', 'rooms_for_guardians'),
+(37, 'security', 'accommodation', 'guard'),
+(38, 'security', 'both', 'cctv'),
+(39, 'security', 'accommodation', 'biometric_door_access'),
+(40, 'security', 'accommodation', 'chain_gate'),
+(41, 'more_extra', 'accommodation', 'travel_concierge'),
+(42, 'more_extra', 'accommodation', 'dr_on_call'),
+(43, 'more_extra', 'accommodation', 'social_activities '),
+(44, 'extra', 'food', 'dahi'),
+(45, 'more_extra', 'food', 'music_system'),
+(46, 'extra', 'food', 'papad'),
+(47, 'extra', 'food', 'salad'),
+(48, 'extra', 'food', 'pickle'),
+(49, 'extra', 'food', 'two_sabji');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `provider_detail_personal`
+--
+
+CREATE TABLE `provider_detail_personal` (
+  `pid` int(11) NOT NULL,
+  `eid` int(11) NOT NULL,
+  `p_fname` varchar(50) NOT NULL,
+  `p_mname` varchar(50) NOT NULL,
+  `p_lname` varchar(50) NOT NULL,
+  `p_contact_1` int(10) NOT NULL,
+  `p_contact_2` int(10) NOT NULL,
+  `p_email` varchar(100) NOT NULL,
+  `p_website` varchar(100) NOT NULL,
+  `p_plot_no` varchar(20) NOT NULL,
+  `p_area` varchar(40) NOT NULL,
+  `p_road` varchar(50) NOT NULL,
+  `p_landmark` varchar(50) NOT NULL,
+  `p_city` varchar(50) NOT NULL DEFAULT 'Nagpur',
+  `p_pincode` int(6) NOT NULL,
+  `p_lat` varchar(50) NOT NULL,
+  `p_long` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `provider_detail_personal`
+--
+
+INSERT INTO `provider_detail_personal` (`pid`, `eid`, `p_fname`, `p_mname`, `p_lname`, `p_contact_1`, `p_contact_2`, `p_email`, `p_website`, `p_plot_no`, `p_area`, `p_road`, `p_landmark`, `p_city`, `p_pincode`, `p_lat`, `p_long`) VALUES
+(1, 1, 'Vishvesh', 'Vishvesh', 'Ujawane', 2147483647, 2147483647, 'vishveshu143@gmail.com', 'www.placeefy.com', 'Railway station Road', 'Mahal', 'Railway station Road', 'Maharashtra', 'Salekasa', 441916, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service`
+--
+
+CREATE TABLE `service` (
+  `sid` int(11) NOT NULL,
+  `f_name` varchar(20) NOT NULL,
+  `m_name` varchar(20) NOT NULL,
+  `l_name` varchar(20) NOT NULL,
+  `company_name` varchar(20) NOT NULL,
+  `plot_num` varchar(5) NOT NULL,
+  `area_nagar` varchar(20) NOT NULL,
+  `landmark` varchar(20) NOT NULL,
+  `road` varchar(20) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `pincode` int(4) NOT NULL,
+  `website` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `account_num` int(20) NOT NULL,
+  `latitude` float NOT NULL,
+  `longitude` float NOT NULL,
+  `gender` int(1) NOT NULL,
+  `cooler` int(1) NOT NULL,
+  `dinning` int(1) NOT NULL,
+  `tv` int(1) NOT NULL,
+  `newpaper` int(1) NOT NULL,
+  `magazine` int(1) NOT NULL,
+  `breakfast` int(1) NOT NULL,
+  `dinner` int(1) NOT NULL,
+  `late_night_meal` int(1) NOT NULL,
+  `lunch` int(1) NOT NULL,
+  `tea_coffee` int(1) NOT NULL,
+  `evening_snacks` int(1) NOT NULL,
+  `cctv` int(1) NOT NULL,
+  `smoking` int(1) NOT NULL,
+  `water_cooler` int(1) NOT NULL,
+  `water_purifier` int(1) NOT NULL,
+  `wash_basin` int(1) NOT NULL,
+  `created_by` varchar(20) NOT NULL,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_by` varchar(50) NOT NULL,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `servicevstype`
+--
+
+CREATE TABLE `servicevstype` (
+  `id` int(11) NOT NULL,
+  `service` text NOT NULL,
+  `type` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `servicevstype`
+--
+
+INSERT INTO `servicevstype` (`id`, `service`, `type`) VALUES
+(1, 'Food Service', 'Mess:In-House,Has a Place(Commercial);Tiffin:Tiffin'),
+(2, 'Accommodation Service', 'House:Private Room,Shared Room,Complete Home;Flat:Serviced,Flat,Apartment;Hostel:Private,Shared;PG:Private,Shared');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service_detail`
+--
+
+CREATE TABLE `service_detail` (
+  `s_id` int(11) NOT NULL,
+  `pid` int(11) NOT NULL,
+  `eid` int(11) NOT NULL,
+  `service` varchar(50) NOT NULL,
+  `servicetype` varchar(50) NOT NULL,
+  `servicesubtype` varchar(50) NOT NULL,
+  `serve_range` varchar(10) NOT NULL,
+  `food_preference` int(1) NOT NULL,
+  `morning` time NOT NULL,
+  `afternoon` time NOT NULL,
+  `evening` time NOT NULL,
+  `night` time NOT NULL,
+  `num_bedroom` int(3) NOT NULL,
+  `num_hall` int(3) NOT NULL,
+  `num_kitchen` int(3) NOT NULL,
+  `num_beds` int(3) NOT NULL DEFAULT '1',
+  `num_customer_accommodate` int(3) NOT NULL DEFAULT '1',
+  `sleeping_arrangement` text NOT NULL,
+  `num_bathroom` int(11) NOT NULL,
+  `num_bath_private` int(3) NOT NULL,
+  `num_bath_shared` int(3) NOT NULL,
+  `s_plot` varchar(50) NOT NULL,
+  `s_area` varchar(100) NOT NULL,
+  `s_road` varchar(100) NOT NULL,
+  `s_landmark` varchar(100) NOT NULL,
+  `s_city` varchar(100) NOT NULL,
+  `s_pincode` int(6) NOT NULL,
+  `s_lat` varchar(100) NOT NULL,
+  `s_long` varchar(100) NOT NULL,
+  `amenities` text NOT NULL,
+  `gender` int(11) NOT NULL,
+  `suitable_for` varchar(11) NOT NULL,
+  `age_group` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `service_detail`
+--
+
+INSERT INTO `service_detail` (`s_id`, `pid`, `eid`, `service`, `servicetype`, `servicesubtype`, `serve_range`, `food_preference`, `morning`, `afternoon`, `evening`, `night`, `num_bedroom`, `num_hall`, `num_kitchen`, `num_beds`, `num_customer_accommodate`, `sleeping_arrangement`, `num_bathroom`, `num_bath_private`, `num_bath_shared`, `s_plot`, `s_area`, `s_road`, `s_landmark`, `s_city`, `s_pincode`, `s_lat`, `s_long`, `amenities`, `gender`, `suitable_for`, `age_group`) VALUES
+(29, 22, 1, '#', '#', '#', '', 0, '00:00:00', '00:00:00', '00:00:00', '00:00:00', 0, 0, 0, 1, 1, '', 0, 0, 0, '', '', '', '', '', 0, '', '', '', 0, '', 0),
+(30, 22, 1, '#', '#', '#', '', 0, '00:00:00', '00:00:00', '00:00:00', '00:00:00', 0, 0, 0, 1, 1, '', 0, 0, 0, '', '', '', '', '', 0, '', '', '', 0, '', 0),
+(42, 22, 1, 'Food', 'Mess', 'Select Sub-Type', '0-10', 0, '01:01:00', '01:01:00', '01:01:00', '01:01:00', 0, 0, 0, 1, 1, '', 0, 0, 0, '', '', '', '', '', 0, '', '', '', 0, '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `suggestion`
+--
+
+CREATE TABLE `suggestion` (
+  `suggestion` longtext NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created_by` varchar(20) NOT NULL,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_by` varchar(20) NOT NULL,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaction_log`
+--
+
+CREATE TABLE `transaction_log` (
+  `transaction_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `uid` int(11) NOT NULL,
+  `f_name` varchar(20) NOT NULL,
+  `m_name` varchar(20) NOT NULL,
+  `l_name` varchar(20) NOT NULL,
+  `plot_num` int(5) NOT NULL,
+  `area_nagar` varchar(10) NOT NULL,
+  `landmark` varchar(10) NOT NULL,
+  `road` varchar(10) NOT NULL,
+  `city` varchar(10) NOT NULL,
+  `pincode` int(6) NOT NULL,
+  `contact1` int(10) NOT NULL,
+  `contact2` int(10) NOT NULL,
+  `email1` varchar(30) NOT NULL,
+  `email2` varchar(30) NOT NULL,
+  `user_type` varchar(20) NOT NULL,
+  `dob` datetime NOT NULL,
+  `working_area` varchar(20) NOT NULL,
+  `college_name` int(20) NOT NULL,
+  `branch` varchar(20) NOT NULL,
+  `year` int(1) NOT NULL,
+  `food_type` int(1) NOT NULL,
+  `acco_type` varchar(1) NOT NULL,
+  `login_id` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `ip` int(11) NOT NULL,
+  `about` varchar(200) NOT NULL,
+  `created_by` varchar(20) NOT NULL,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_by` varchar(20) NOT NULL,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_booking`
+--
+
+CREATE TABLE `user_booking` (
+  `user_id` int(11) NOT NULL,
+  `service_id` int(11) NOT NULL,
+  `created_by` varchar(50) NOT NULL,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_by` varchar(50) NOT NULL,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `account_num` int(20) NOT NULL,
+  `transaction_id` int(11) NOT NULL,
+  `payment_mode` int(11) NOT NULL,
+  `price` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `accommodation`
+--
+ALTER TABLE `accommodation`
+  ADD PRIMARY KEY (`aid`);
+
+--
+-- Indexes for table `business_details`
+--
+ALTER TABLE `business_details`
+  ADD PRIMARY KEY (`bid`);
+
+--
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`eid`);
+
+--
+-- Indexes for table `food_services`
+--
+ALTER TABLE `food_services`
+  ADD PRIMARY KEY (`fid`);
+
+--
+-- Indexes for table `master_amenities`
+--
+ALTER TABLE `master_amenities`
+  ADD PRIMARY KEY (`amenity_id`);
+
+--
+-- Indexes for table `provider_detail_personal`
+--
+ALTER TABLE `provider_detail_personal`
+  ADD PRIMARY KEY (`pid`);
+
+--
+-- Indexes for table `service`
+--
+ALTER TABLE `service`
+  ADD PRIMARY KEY (`sid`);
+
+--
+-- Indexes for table `servicevstype`
+--
+ALTER TABLE `servicevstype`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `service_detail`
+--
+ALTER TABLE `service_detail`
+  ADD PRIMARY KEY (`s_id`);
+
+--
+-- Indexes for table `transaction_log`
+--
+ALTER TABLE `transaction_log`
+  ADD PRIMARY KEY (`transaction_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`uid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `accommodation`
+--
+ALTER TABLE `accommodation`
+  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `business_details`
+--
+ALTER TABLE `business_details`
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT for table `employee`
+--
+ALTER TABLE `employee`
+  MODIFY `eid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `food_services`
+--
+ALTER TABLE `food_services`
+  MODIFY `fid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `master_amenities`
+--
+ALTER TABLE `master_amenities`
+  MODIFY `amenity_id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+--
+-- AUTO_INCREMENT for table `provider_detail_personal`
+--
+ALTER TABLE `provider_detail_personal`
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `service`
+--
+ALTER TABLE `service`
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `servicevstype`
+--
+ALTER TABLE `servicevstype`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `service_detail`
+--
+ALTER TABLE `service_detail`
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+--
+-- AUTO_INCREMENT for table `transaction_log`
+--
+ALTER TABLE `transaction_log`
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

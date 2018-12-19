@@ -1,0 +1,48 @@
+window.onload=getMyLocation;
+var map;
+function getMyLocation() {
+	// body...
+	if(navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(displayLocation);
+	}
+	else
+	{
+		alert('oops!!! No Geolocation Support');
+	}
+}
+
+function displayLocation(position)
+{
+	var latitude=position.cords.latitude;
+	var longitude=position.cords.longitude;
+	var latLng=new.google.maps.LatLng(latitude, longitude);
+	showMap(latLng);
+	createMarker(latLng);
+}
+
+function showMap(lotLng){
+	var mapOptions={
+		center:latlng,
+		zoom:10,
+		mapTypeId:google.maps.mapTypeId.RoadMap
+	};
+	maps=new.google.maps.Map(document.getElementById('map'),mapOptions);
+}
+function createMarker(latLng) {
+	var mapOptions={
+		position:latLng,
+		map:map,
+		animation:google.maps.Animation.DROP,
+		clickable:true
+	}
+var marker=new google.maps.Marker(markerOptions);
+}
+// function initMap() {
+  
+//   var Nagpur = {lat: 21.1458, lng: 79.0882};
+  
+//   var map = new google.maps.Map(
+//       document.getElementById('map'), {zoom: 10, center: Nagpur});
+
+//   var marker = new google.maps.Marker({position: Nagpur, map: map});
+// }

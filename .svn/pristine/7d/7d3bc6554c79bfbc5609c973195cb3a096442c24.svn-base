@@ -1,0 +1,48 @@
+<?php
+
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+
+
+
+// Escape user inputs for security
+$s_plot_no = mysqli_real_escape_string($pcon, $_POST['s_plot']);
+$s_area = mysqli_real_escape_string($pcon, $_POST['s_area']);
+$s_road = mysqli_real_escape_string($pcon, $_POST['s_road']);
+$s_landmark = mysqli_real_escape_string($pcon, $_POST['s_landmark']);
+$s_city = mysqli_real_escape_string($pcon, $_POST['s_city']);
+$s_pincode = mysqli_real_escape_string($pcon, $_POST['s_pincode']);
+$s_lat = mysqli_real_escape_string($pcon, $_POST['s_lat']);
+$s_long = mysqli_real_escape_string($pcon, $_POST['s_long']);
+$eid= mysqli_real_escape_string($pcon, $_POST['eid_pass']);
+$pid= mysqli_real_escape_string($pcon, $_POST['pid_pass']);
+
+ // Query to Get the sid of respective service_detail
+$query = mysqli_fetch_array(mysqli_query($pcon,"SELECT s_id FROM service_detail where `pid`='$pid'&&eid='$eid'"));
+		$sid=$query['s_id'];
+
+$sql="UPDATE service_detail SET 
+	s_plot='$s_plot_no',
+	s_city='$s_city',
+	s_road='$s_road',
+	s_landmark='$s_landmark',
+	s_pincode='$s_pincode',
+	s_area='$s_area',
+	s_lat='$s_lat',
+	s_long='$s_long'
+	WHERE s_id=$sid";
+	if(mysqli_query($pcon, $sql))
+		{
+				
+			header("Location:amenities.php?id=1&eid=$eid&sid=$sid&pid=$pid");
+		} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+		}
+		
+
+// close connection
+
+mysqli_close($pcon);
+?>

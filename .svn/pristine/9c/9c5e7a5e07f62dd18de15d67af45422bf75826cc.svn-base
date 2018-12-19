@@ -1,0 +1,40 @@
+<?php
+
+// include("p_dbconnection.php");
+include'GlobalUtility.php';
+$pcon=connectToDB($INFO_GATH_DB);
+$eid = mysqli_real_escape_string($pcon, $_POST['eid_pass']);
+$pid= mysqli_real_escape_string($pcon, $_POST['pid_pass']);
+$sid= mysqli_real_escape_string($pcon, $_POST['sid_pass']);
+
+	
+	$food_cusine_count_row = mysqli_fetch_array(mysqli_query($pcon,"SELECT count(cusine_id) FROM master_cusine "));
+	$food_cusine_count=$food_cusine_count_row[0];
+		
+	$food_cusine='';
+	
+	for($i=1;$i<=$food_cusine_count;$i++){
+		if(isset($_POST['cusine'.$i])){
+			$cusine_id=$_POST['cusine'.$i];
+			$food_cusine .= $cusine_id.';';
+		}							
+	}
+	
+	
+ $sql="UPDATE service_detail SET 
+ 	food_cusine='$food_cusine'
+ 	WHERE s_id=$sid";
+
+
+ 	if(mysqli_query($pcon, $sql)){
+ 		header("Location:amenities.php?id=1&eid=$eid&pid=$pid&sid=$sid");
+ 	} 
+	else{
+		echo "ERROR: Could not able to execute $sql. " . mysqli_error($pcon);
+	}
+		
+
+// // close connection
+
+mysqli_close($pcon);
+?>

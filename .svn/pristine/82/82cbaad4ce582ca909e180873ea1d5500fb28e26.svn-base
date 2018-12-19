@@ -1,0 +1,291 @@
+	<?php 
+	include 'session_verification.php';
+	?>
+
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Placeefy| Food and Accommodations Services</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="../css/linearicons.css">
+			<link rel="stylesheet" href="../css/font-awesome.min.css">
+			<link rel="stylesheet" href="../css/bootstrap.css">
+			<link rel="stylesheet" href="../css/magnific-popup.css">
+			<link rel="stylesheet" href="../css/nice-select.css">							
+			<link rel="stylesheet" href="../css/animate.min.css">
+			<link rel="stylesheet" href="../css/jquery-ui.css">			
+			<link rel="stylesheet" href="../css/main.css">
+
+			 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+		</head>
+		<body>	
+			  <header id="header">
+		  	
+			    <div class="fluid-container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+			    		<a href="#"><img src="../img/logo.png" alt="" title="" /></a>		
+						<nav id="nav-menu-container">
+							<ul class="nav-menu">
+							  <li class="menu-active"><a href="#">Referral</a></li>
+							  <li><a href="logout_employee.php">Logout</a></li>
+							  <li><a href="#">About Us</a></li>
+							  <li><a href="#">Help</a></li>
+							</ul>
+						</nav><!-- #nav-menu-container -->		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+			  	<?php  if(isset($_GET['eid']))
+						{
+							$eid=$_GET['eid'];
+						}
+						if(isset($_GET['pid']))
+						{
+							$pid=$_GET['pid'];
+						}
+						if(isset($_GET['sid']))
+						{
+							$sid=$_GET['sid'];
+						}
+						?>
+				 <section class="home-about-area section-gap" style="margin-top: 90px">
+				<div class="container">
+					<?php
+						if(isset($_GET['id']))
+						{
+					  		$id=$_GET['id'];
+							if($id==1)
+							{
+								echo '<div class="alert alert-success" role="alert" > 
+									<center>Information Saved Successfully.</center></div>';
+							}
+						}
+					?><div class="row section-title" style="margin-bottom: 40px;">
+						<h1>Service Address and Seating Facility</h1>
+					</div>
+					<form class="form-group" name="service_location_form" action="service_location_process.php" method="post">
+						<hr>
+							<div class="row">
+							<div class="col-lg-6 col-md-6">
+								<div class="switch-wrap d-flex justify-content-left">
+										<h5>Same as Living Address:</h5>
+										<div class="primary-switch">
+											<input type="checkbox" id="default-switch" onclick="sameAddressDisplay()">
+											<label for="default-switch"></label>
+										</div>
+									</div>
+								<div class="mt-10 col-lg-12 col-md-12">
+										<input type="text"  name="s_plot" placeholder="Plot No." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Plot No.'" required class="single-input" id="s_plot">
+								</div>
+								<div class="mt-10 col-lg-12 col-md-12">
+											<input type="text" name="s_area" placeholder="Area/Nagar" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Area/Nagar'" required class="single-input" id="s_area">
+								</div>
+								<div class="mt-10 col-lg-12 col-md-12">
+									<input type="text" name="s_road" placeholder="Road" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Road'" required class="single-input" id="s_road">
+								</div>
+								<div class="mt-10 col-lg-12 col-md-12">
+											<input type="text" name="s_lat" placeholder="Latitude" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Latitude'" rclass="single-input" id="lat">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6" style="padding-top: 22px;">
+								<div class="mt-10 col-lg-12 col-md-12">
+										<input type="text"  name="s_landmark" placeholder="Landmark" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Landmark'" required class="single-input" id="s_landmark">
+								</div>
+								<div class="mt-10 col-lg-12 col-md-12">
+										<input type="text"  name="s_city" placeholder="City" value="City:Nagpur" onfocus="this.placeholder = ''" onblur="this.placeholder = 'City'" required class="single-input" id="s_city">
+								</div>
+								<div class="mt-10 col-lg-12 col-md-12">
+											<input type="text" name="s_pincode" placeholder="Pincode" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Pincode'" required class="single-input" id="s_pincode">
+								</div>
+								
+								<div class="mt-10 col-lg-12 col-md-12">
+											<input type="text" name="s_long" placeholder="Longitude" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Longitude'" class="single-input" id="lng">
+								</div>
+							</div>
+						</div>
+						<br>
+						<div id='seating_facility' class="col-lg-6 col-md-3">
+								<label><h5>Seating Facility</h5></label>
+								<div class="switch-wrap d-flex justify-content-left">
+										<div class="primary-switch1">
+											<input name="seating_facility" type="radio" id="primary-switch1"  value="1">
+											<label for="primary-switch1"></label>
+										</div>
+										<p>Ground Seating (Old Indian Style)</p>
+									</div>
+									<div class="switch-wrap d-flex justify-content-left">
+										<div class="primary-switch2">
+											<input name="seating_facility" type="radio" id="primary-switch2"  value="0">
+											<label for="primary-switch2"></label>
+										</div>
+										<p>Dining (Table and Chair)</p>
+									</div>
+							</div>
+							<div id="delivery" class="col-lg-6 col-md-3">
+								<label><h5>Delivery Radius</h5></label>
+								<div class="mt-10 col-lg-12 col-md-12">
+											<input type="text" name="delivery" placeholder="Delivery Radius (In Kilometers)" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Delivery Radius (In Kilometers)'" required class="single-input">
+								</div>
+							</div>
+							<br>
+							<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+							
+							<div class="col-lg-12">
+							<input type="hidden" name="eid_pass" value="<?php echo $eid;?>">
+							<input type="hidden" name="pid_pass" value="<?php echo $pid;?>">
+							<input type="hidden" name="sid_pass" value="<?php echo $sid;?>">
+						<div class="personal_info_submit_btn">
+							<input type="submit" class="genric-btn success circle arrow" value="Save and Next" name="submit_service_location">
+						</div>
+					</div>
+					</form>
+			</div>	
+			</section>
+
+			<?php
+			$query = mysqli_fetch_array(mysqli_query($pcon,"SELECT servicetype FROM service_detail where `s_id`='$sid'"));
+				$servicetype=$query['servicetype'];
+				//echo $servicetype;
+			?>
+			<script type="text/javascript">
+				if(<?php echo $servicetype;?>=="Tiffin")
+				{	
+					alert('Hi');
+					document.getElementById('seating_facility').style.display="none";
+					document.getElementById('delivery').style.display="block";
+				}
+				else if(<?php echo $servicetype;?>=="Mess")
+				{
+					alert('Hi');
+					document.getElementById('seating_facility').style.display="block";
+					document.getElementById('delivery').style.display="none";
+				}
+			</script>
+
+
+			<!-- start footer Area -->		
+			<footer class="footer-area section-gap" style="margin-top: 73px">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<p><b>Placeefy</b> is a web-based service startup where people can find the best and affordable rooms, mess, tiffin and hostel service in just a few clicks.</p>							
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Features</h6>
+								<ul>
+									<li><a href="#">Referral</a></li>
+									<li><a href="#">We're Hiring</a></li>
+									<li><a href="#">Official Placeefy Blog</a></li>
+									<li><a href="#">Terms of Service</a></li>
+								</ul>								
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>About</h6>
+								<ul>
+									<li><a href="#">Know more about us</a></li>
+									<li><a href="#">Our Team</a></li>
+									<li><a href="#">Our Services</a></li>
+									<li><a href="#">Where we are?</a></li>
+								</ul>								
+							</div>
+						</div>												
+						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+							<div class="single-footer-widget">
+								<h6>Follow Us</h6>
+								<p>Let us be social</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+							</div>
+						</div>							
+						<div class="col-lg-4  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Contact Us</h6>
+								<p>Having any queries? Please connect with us at:</p>
+								<p>+91-814907298</p>
+								<p>support@placeefy.com</p>
+								
+							</div>
+						</div>	
+						<hr>
+						<p class="mt-80 mx-auto footer-text col-lg-12">
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with<i class="fa fa-heart-o" aria-hidden="true"></i> in Nagpur by <a href="https://placeefy.com" target="_blank">Placeefy Technologies</a>
+						</p>											
+					</div>
+				</div>
+				<img class="footer-bottom" src="../img/footer-bottom.png" alt="">
+			</footer>	
+			<!-- End footer Area -->	
+
+			<!-- Code to check and fetch the personal address from database -->
+			<?php
+			$query = mysqli_query($pcon,"select * from provider_detail_personal where `pid`='$pid'&&`eid`='$eid'");
+				if(mysqli_num_rows($query)>0)
+				{
+					$row=mysqli_fetch_array($query);
+					$s_plot=$row['p_plot_no'];
+					$s_area=$row['p_area'];
+					$s_road=$row['p_road'];
+					$s_landmark=$row['p_landmark'];
+					$s_city=$row['p_city'];
+					$s_pincode=$row['p_pincode'];
+					$s_lat=$row['p_lat'];
+					$s_long=$row['p_long'];
+				} 
+				
+			?>
+
+				
+
+		<script type="text/javascript">
+			function sameAddressDisplay(){
+				document.getElementById('s_plot').value="<?php echo $s_plot;?>";
+				document.getElementById('s_area').value="<?php echo $s_area;?>";
+				document.getElementById('s_road').value="<?php echo $s_road;?>";
+			 	document.getElementById('s_city').value="<?php echo $s_city;?>";
+				document.getElementById('s_landmark').value="<?php echo $s_landmark;?>";
+				document.getElementById('s_pincode').value="<?php echo $s_pincode;?>";
+
+			}
+			</script>
+			<script type="text/javascript" src="map.js"></script>
+			<script src="../js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="../js/vendor/bootstrap.min.js"></script>			
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="../js/easing.min.js"></script>			
+			<script src="../js/hoverIntent.js"></script>
+			<script src="../js/superfish.min.js"></script>	
+			<script src="../js/jquery.ajaxchimp.min.js"></script>
+			<script src="../js/jquery.magnific-popup.min.js"></script>	
+ 			<script src="../js/jquery-ui.js"></script>								
+			<script src="../js/jquery.nice-select.min.js"></script>							
+			<script src="../js/mail-script.js"></script>	
+			<script src="../js/main.js"></script>	
+		</body>
+	</html>
